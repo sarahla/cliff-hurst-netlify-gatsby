@@ -37,13 +37,15 @@ const Navbar = class extends React.Component {
       }
     )
   }
-  
+
   render() {
     return (
       <header className={`nav ${this.state.navBarActiveClass}`}>
-          <Link to="/" className="nav__logo" title="Logo">
-            <img src={logo} width="154" height="24" alt="Cliff Hurst" />
-          </Link>
+          { !this.props.hideLogo ? (
+            <Link to="/" className="nav__logo" title="Logo">
+              <img src={logo} width="154" height="24" alt="Cliff Hurst" />
+            </Link> ) : '' 
+          }
           
           <button className="nav__btn--open" data-nav-open="" onClick={() => this.toggleHamburger()}>
             <svg className="icon-menu"><use xlinkHref={`${icons}#icon-menu`}></use></svg>
