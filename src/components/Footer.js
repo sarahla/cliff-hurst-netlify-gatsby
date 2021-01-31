@@ -7,7 +7,7 @@ const Footer = class extends React.Component {
       <footer className="footer u-bg-lt-gray u-pt-15 u-pb-10">
         <nav className="grid nav--footer u-mb-15">
             <div className="grid-col-6 grid-col-t-12 grid-col-m-12">
-                <h3 className="t-h3 u-mb-0">Get in touch.</h3>
+                <h3 className="t-h2 u-mb-0">Get in touch.</h3>
                 <p className="t-lead1">I look forward to hearing from you.</p>
             </div>
             <div className="grid-col-2 grid-col-t-4">

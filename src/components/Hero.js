@@ -14,9 +14,9 @@ function Hero(props) {
             </div>
             <div className="hero__layout">
                 <div className="hero__content">
-                    <h2 className="t-h2 u-mr-2 u-mb-0">
+                    <h1 className="t-h1 u-mr-2 u-mb-0">
                         I am <br/>a&nbsp;<span className="t-cursive">{title}</span>
-                    </h2>
+                    </h1>
                 </div>
             </div>    
         </section>
