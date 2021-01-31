@@ -1,12 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
-
 const Footer = class extends React.Component {
   render() {
     return (
@@ -19,17 +13,17 @@ const Footer = class extends React.Component {
             <div className="grid-col-2 grid-col-t-4">
                 <h4 className="nav__title u-c-blue">About</h4>
                 <ul className="nav__list">
-                    <li><a href="/professor/">Teaching</a></li>
-                    <li><a href="/researcher/">Research</a></li>
-                    <li><a href="/consultant/">Consulting</a></li>
-                    <li><a href="/spoon-carver/">Spoon Carving</a></li>
+                    <li><Link to="/professor/">Teaching</Link></li>
+                    <li><Link to="/researcher/">Research</Link></li>
+                    <li><Link to="/consultant/">Consulting</Link></li>
+                    <li><Link to="/spoon-carver/">Spoon Carving</Link></li>
                 </ul>
             </div>
             <div className="grid-col-2 grid-col-t-4">
                 <h4 className="nav__title u-c-blue">Writings</h4>
                 <ul className="nav__list">
                     
-                    <li><a href="/researcher/articles.html">Articles</a></li>
+                    <li><Link to="/researcher/articles.html">Articles</Link></li>
                 </ul>
             </div>
             <div className="grid-col-2 grid-col-t-4">
