@@ -11,6 +11,9 @@ const Navbar = class extends React.Component {
       active: false,
       navBarActiveClass: '',
     }
+
+    // clean up active class on body
+    document.body.classList.remove('nav-active');
   }
 
   toggleHamburger = () => {
@@ -34,11 +37,8 @@ const Navbar = class extends React.Component {
       }
     )
   }
-
+  
   render() {
-    // clean up active class on body
-    document.body.classList.remove('nav-active');
-
     return (
       <header className={`nav ${this.state.navBarActiveClass}`}>
           <Link to="/" className="nav__logo" title="Logo">
@@ -68,7 +68,7 @@ const Navbar = class extends React.Component {
               <h4 className="nav__title">Connect</h4>
               <ul className="nav__list">
                   <li><a href="mailto:clif@cliffordhurst.com">Email Me</a></li>
-                  <li><a href="https://www.linkedin.com/in/cliffhurst" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://www.linkedin.com/in/cliffhurst" target="_blank" rel="noreferrer">LinkedIn</a></li>
                   <li><a href="/assets/pdfs/Hurst_Clifford_CV_06142013.pdf">CV</a></li>
               </ul>
 

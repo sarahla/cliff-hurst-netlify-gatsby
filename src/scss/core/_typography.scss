@@ -38,3 +38,17 @@ body {
     font-family: font-stack(accent);
     font-weight: normal;
 }
+
+.content {
+    h2 {
+        @extend .t-h4;
+    }
+
+    h3 {
+        @extend .t-h5;
+    }
+
+    p {
+        @extend .t-p1;
+    }
+}

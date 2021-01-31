@@ -8,20 +8,37 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div>
+      <section id="professor" className="hero--secondary" data-animate>
+            <div className="hero__image" style={{'backgroundImage':'url(../../assets/images/researcher.jpg)', 'backgroundPosition': 'top 35% center'}}></div>
+            <div className="hero__layout">
+                <div className="hero__content">
+                    <h2 className="t-h2 u-mr-2 u-mb-0">
+                        I am <br/>a&nbsp;<span className="t-cursive">{title}</span>
+                    </h2>
+                </div>
+            </div>    
+        </section>
+        <main>
+            <section className="wrapper u-mb-30">
+                <PageContent className="content" content={content} />
+            </section>
+        </main>
+    </div>
+    // <section className="section section--gradient">
+    //   <div className="container">
+    //     <div className="columns">
+    //       <div className="column is-10 is-offset-1">
+    //         <div className="section">
+    //           <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+    //             {title}
+    //           </h2>
+    //           <PageContent className="content" content={content} />
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
   )
 }
 
