@@ -1,0 +1,179 @@
+@include asp();
+
+[class*="u-aspect-"] {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include object-fit(cover);
+  }
+}
+
+@each $color-name, $color in $colors {
+  .u-bg-#{$color-name} {
+    background-color: $color;
+  }
+
+  .u-c-#{$color-name} {
+    color: $color;
+  }
+}
+
+@for $i from 0 to 31 {
+  .u-p-#{$i} {
+    padding: space($i);
+  }
+
+  .u-pt-#{$i} {
+    padding-top: space($i);
+  }
+
+  .u-pr-#{$i} {
+    padding-right: space($i);
+  }
+
+  .u-pb-#{$i} {
+    padding-bottom: space($i);
+  }
+
+  .u-pl-#{$i} {
+    padding-left: space($i);
+  }
+
+  .u-m-#{$i} {
+    margin: space($i) !important;
+  }
+
+  .u-mt-#{$i} {
+    margin-top: space($i) !important;
+  }
+
+  .u-mr-#{$i} {
+    margin-right: space($i) !important;
+  }
+
+  .u-mb-#{$i} {
+    margin-bottom: space($i) !important;
+  }
+
+  .u-ml-#{$i} {
+    margin-left: space($i) !important;
+  }
+}
+
+@include mq($until: tablet) {
+  @for $i from 0 to 31 {
+    .m-u-p-#{$i} {
+      padding: space($i);
+    }
+  
+    .m-u-pt-#{$i} {
+      padding-top: space($i);
+    }
+  
+    .m-u-pr-#{$i} {
+      padding-right: space($i);
+    }
+  
+    .m-u-pb-#{$i} {
+      padding-bottom: space($i);
+    }
+  
+    .m-u-pl-#{$i} {
+      padding-left: space($i);
+    }
+  
+    .m-u-m-#{$i} {
+      margin: space($i) !important;
+    }
+  
+    .m-u-mt-#{$i} {
+      margin-top: space($i) !important;
+    }
+  
+    .m-u-mr-#{$i} {
+      margin-right: space($i) !important;
+    }
+  
+    .m-u-mb-#{$i} {
+      margin-bottom: space($i) !important;
+    }
+  
+    .m-u-ml-#{$i} {
+      margin-left: space($i) !important;
+    }
+  }
+}
+
+.u-center {
+  text-align: center !important;
+}
+
+.u-right {
+  text-align: right !important;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-loading {
+  opacity: 0.5 !important;
+}
+
+@include mq($until: tablet) {
+  .m-u-hidden {
+    display: none !important;
+  }
+}
+
+@include mq($from: tablet, $until: desktop) {
+  .t-u-hidden {
+    display: none !important;
+  }
+}
+
+@include mq($from: tablet) {
+  .d-u-hidden {
+    display: none !important;
+  }
+}
+
+.u-right {
+  text-align: right !important;
+}
+
+.u-center {
+  text-align: center !important;
+}
+
+.u-left {
+  text-align: left !important;
+}
+
+.u-bold {
+  font-weight: font-weight(bold);
+}
+
+.u-italic {
+  font-style: italic;
+}
+
+@include mq($until: tablet) {
+  .m-u-right { text-align: right !important; }
+  .m-u-center { text-align: center !important; }
+  .m-u-left { text-align: left !important; }
+}
+
+@include mq($from: tablet, $until: desktop) {
+  .t-u-right { text-align: right !important; }
+  .t-u-center { text-align: center !important; }
+  .t-u-left { text-align: left !important; }
+}

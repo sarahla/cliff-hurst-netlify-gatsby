@@ -1,0 +1,75 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: minmax($gap/2, 1fr) minmax(0, $max-width) minmax($gap/2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "left content right";
+    
+    &::before{ grid-area: left; }
+    &::after { grid-area: right }
+
+    > * {
+        grid-area: content;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+    grid-gap: 0;
+
+    @include mq(tablet) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: $gap;
+    }
+}
+
+.grid-col--center {
+    align-self: center;
+}
+
+@for $i from 0 to 13 {
+    .grid-col-#{$i} {
+        grid-column: span $i;
+        @include mq($until: tablet) {
+            grid-column: span 12;
+        }
+    }
+    @include mq($until: mobile) {
+        .grid-col-xs-#{$i} {
+            grid-column: span $i;
+        }
+    }
+
+    @include mq($until: tablet) {
+        .grid-col-m-#{$i} {
+            grid-column: span $i;
+        }
+    }
+    
+    @include mq($from: tablet, $until: desktop) {
+        .grid-col-t-#{$i} {
+            grid-column: span $i;
+        }
+    }
+
+    @include mq($from: desktop, $until: wide) {
+        .grid-col-d-#{$i} {
+            grid-column: span $i;
+        }
+    }
+
+    @include mq($from: wide, $until: xwide) {
+        .grid-col-w-#{$i} {
+            grid-column: span $i;
+        }
+    }
+    
+    @include mq($from: xwide) {
+        .grid-col-xw-#{$i} {
+            grid-column: span $i;
+        }
+    }
+}
+

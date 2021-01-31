@@ -1,0 +1,191 @@
+.block {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: minmax($gap/2, 1fr) minmax(0, 1200px) minmax($gap/2, 1fr);
+    grid-template-rows: 1fr;
+    min-height: auto;
+    @include mq($from: tablet) {
+        min-height: calc( 100vh - 100px) ;
+    }
+
+    .block__layout {
+        grid-column: 2 / 4;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        z-index: 0;
+
+        @include mq($until: tablet) {
+            grid-column: 1 / 4;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: minmax(200px, auto) minmax(200px, auto);
+        }
+
+        .block__content {
+            // X-Wide
+            grid-column: 1 / 6;
+            grid-row-start: 1;
+            align-self: center;
+            background-color: color(white);
+            padding: space(10) space(10) space(10) 0;
+            position: relative;
+            z-index: auto;
+            
+            // Desktop
+            @include mq($until: xwide) {
+                grid-column: 1 / 7;
+                grid-row-start: 1;
+                padding: space(8) space(6) space(8) 0;
+            }
+            
+            // Mobile
+            @include mq($until: tablet) {
+                grid-row: 2 / 3;
+                grid-column: 1 / 13;
+                padding: space(5);
+                align-self: start;
+            }
+        }
+        
+        .block__image {
+            z-index: -2;
+            grid-column: 4 / 13;
+            grid-row-start: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            .block__image__container {
+                flex-grow: 1;
+            }
+            
+            img {
+                @include object-fit(cover);
+            }
+    
+            figcaption {
+                text-align: right;
+                padding: space(5) space(10) 0;
+                min-height: 70px;
+
+                @include mq($until: desktop) {
+                    padding: space(3);
+                }
+
+                @include mq($until: tablet) {
+                    &:empty {
+                        min-height: 0;
+                    }
+                }
+            }
+
+            @include mq($until: xwide) {
+                grid-column: 6 / 13;
+                grid-row-start: 1;
+            }
+    
+            @include mq($until: tablet) {
+                grid-column: 1 / 13;
+                grid-row: 1 / 2;
+            }
+        }
+    }
+    
+    
+
+    &--right {
+        .block__layout {
+            // X-Wide
+            grid-column: 1 / 3;
+
+            // Mobile
+            @include mq($until: tablet) {
+                grid-column: 1 / 4;
+            }
+
+            .block__content{
+                // X-Wide
+                grid-column: 8 / 13;
+                padding: space(10) 0 space(10) space(10);
+
+                // Desktop
+                @include mq($until: xwide) {
+                    grid-column: 7 / 13;
+                    padding: space(8) 0 space(8) space(6);
+                }
+                
+                // Mobile
+                @include mq($until: tablet) {
+                    grid-column: 1 / 13;
+                    grid-row: 2 / 3;
+                    padding: space(5);
+                }
+            }
+    
+            .block__image {
+                // X-Wide
+                grid-column: 1 / 10;
+                
+                // Desktop
+                @include mq($until: xwide) {
+                    grid-column: 1 / 8;
+                }
+
+                // Mobile
+                @include mq($until: tablet) {
+                    grid-column: 1 / 13;
+                    grid-row: 1 / 2;
+                }
+    
+                figcaption {
+                    top: 100%;
+                    left: 0;
+                    text-align: left;
+                    padding: space(5) space(10) 0;
+                    @include mq($until: desktop) {
+                        padding: space(3);
+                    }
+                }
+            }
+        }
+    }
+
+    /* Add some fun animation stuff if data-attribute exists */
+    &[data-animate] {
+        transition: opacity 500ms $ease-gentle;
+        opacity: 0;
+        
+        .block__image {
+            transform: translateX(100%);
+            transition-delay: 2s;
+            transition: transform 1s $ease-gentle;
+        }
+
+        .block__content {
+            transform: translateX(-100%);
+            transition-delay: 2s;
+            transition: transform 1s  $ease-gentle;
+        }
+
+        &.block--right {
+            .block__image {
+                transform: translateX(-100%);
+            }
+
+            .block__content {
+                transform: translateX(100%);
+            }
+        }
+
+        &.in-view {
+            opacity: 1;
+            .block__image { transform: translateX(0) }
+            .block__content { transform: translateX(0) }
+    
+            &.block--right {
+                .block__image { transform: translateX(0) }
+                .block__content { transform: translateX(0) }
+            }
+        }
+    }
+}

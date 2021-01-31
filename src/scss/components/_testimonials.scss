@@ -1,0 +1,103 @@
+@keyframes accent {
+    50% {
+        color: color(blue);
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.testimonial__wrapper {
+    padding: 40px 0;
+    display: flex;
+    z-index: 0;
+    background: color(lt-gray);
+
+    // background-image: url(../assets/images/texture.jpg);
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    @include mq($until: desktop) {
+        flex-direction: column;
+    }
+}
+
+.testimonial__intro {
+    width: 45%;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    z-index: z-index(overlay);
+    margin: 0 !important;
+    padding: 0 $gap;
+
+    @include mq($until: desktop) {
+        width: auto;
+        height: auto;
+        padding: $gap;
+        min-height: 0;
+    }
+}
+
+.testimonial__grid {
+    max-width: 40%;
+    margin: 0 auto;
+    z-index: z-index(overlay);
+    overflow: hidden;
+
+    @include mq($until: desktop) {
+        max-width: none;
+        background-color: color(lt-gray);
+    }
+
+    .testimonial__block-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @include mq($until: desktop) {
+            min-height: 0;
+            padding: $gap / 2;
+        }
+    }
+
+    .testimonial__block {
+        padding: $gap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        z-index: 0;
+        .word {
+            font-weight: font-weight(bold);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            &::before {
+                transition: width 200ms $ease;
+                content: '';
+                background: color(yellow);
+                display: block;
+                position: absolute;
+                left: 5px;
+                top: 5px;
+                width: 0;
+                height: 75%;
+                z-index: -1;
+            }
+
+            &.in-view {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

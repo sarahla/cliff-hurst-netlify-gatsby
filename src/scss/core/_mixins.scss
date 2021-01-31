@@ -1,0 +1,128 @@
+
+//https://github.com/sass-mq/sass-mq
+@import '../../node_modules/sass-mq/mq';
+
+// Map deep get
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+// Will return stripped value
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+  
+    @return $number;
+}
+  
+// Will return converted px unit to em unit
+@function rem($pixels, $context: $browser-context) {
+    @return #{strip-unit($pixels/$context)}rem;
+}
+
+// Get color by name
+@function color($color) {
+    @return map-get($colors, $color);
+}
+
+// Will output all the typography styles for the given type name
+@mixin type-style($name, $sizes: map-get($typography, $name)) {
+  @each $size, $styles in $sizes {
+    @if $size == 'base' {
+      @each $prop, $value in $styles {
+        #{$prop}: $value;
+      }
+    } @else {
+      @include mq($from: $size) {
+        @each $prop, $value in $styles {
+          #{$prop}: $value;
+        }
+      }
+    }
+  }
+}
+
+// Generates all typography classes
+@mixin typography($typography) {
+    @each $class, $sizes in $typography {
+        .t-#{$class} {
+            @include type-style($class, $sizes)
+        }
+    }
+}
+
+// Will return spacing multiplied with desired number
+// To devide the spacing, use reciprocal value, eg 1 / 2
+@function space($x: 1) {
+    @return #{rem($x * $whitespace)};
+}
+  
+// Will create aspect classes
+@mixin asp() {
+  @each $x, $y in $aspects {
+    .u-aspect-#{$x}x#{$y} {
+      padding-top: calc(#{$y} / #{$x} * 100%);
+    }
+  }
+
+  @each $x, $y in $aspects {
+    @include mq($until: tablet) {
+      .m-u-aspect-#{$x}x#{$y} {
+        padding-top: calc(#{$y} / #{$x} * 100%);
+      }
+    }
+  }
+}
+  
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+  This is primarily used to polyfill object-fit functionality in IE11
+*/
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+    object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+      object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}
+
+// Z-Index Function
+@function z-index($layer) {
+  @if not map-has-key($zindex, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($zindex, $layer);
+}
+
+// Font Weights
+@function font-weight($weight) {
+  @if not map-has-key($font-weights, $weight) {
+    @warn "No font-weight found for `#{$layer}` in $font-weights map. Property omitted.";
+  }
+
+  @return map-get($font-weights, $weight);
+}
+
+// Font Stack
+@function font-stack($style) {
+  @if not map-has-key($font-stacks, $style) {
+    @warn "No font-stack found for `#{$style}` in $font-stack map. Property omitted.";
+  }
+
+  @return map-get($font-stacks, $style);
+}
+
+
+

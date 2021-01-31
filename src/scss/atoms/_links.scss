@@ -1,0 +1,57 @@
+button {
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
+a {
+    font-size: inherit;
+    text-decoration: none;
+    color: color(blue);
+    transition: color 300ms $ease-gentle;
+
+    &:hover {
+       color: darken(color(blue), 30%);
+    }
+}
+
+.link {
+    font-size: inherit;
+    text-decoration: none;
+    font-weight: map-get($font-weights, bold);
+    color: color(blue);
+
+    &--cta {
+        color: inherit;
+        position: relative;
+        @include type-style(lead1);
+        font-weight: map-get($font-weights, bold);
+
+        &::before {
+            transition: width 200ms $ease;
+            content: '';
+            background: color(yellow);
+            display: block;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: 0;
+            height: 90%;
+            z-index: -1;
+        }
+
+        &:hover {
+            color: color(black);
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &--document {
+        color: color(black);
+        &:hover{
+            color: color(blue);
+        }
+    }
+}

@@ -1,0 +1,285 @@
+.hero {
+  text-align: center;
+  overflow: hidden;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: space(10);
+
+  @include mq($until:tablet) {
+    min-height: 60vh;
+  }
+}
+
+.hero--secondary {
+  background-color: color(blue);
+  position: relative;
+  margin-bottom: space(25);
+  background-repeat: no-repeat;
+  background-size: 0;
+  @include mq($until: wide) {
+    margin-bottom: space(5);
+  }
+
+  .hero__image {
+    background-size: cover;
+    filter: grayscale(100%) brightness(150%);
+    opacity: 0.8;
+    background-position: center center;
+    mix-blend-mode: multiply;
+    align-self: stretch;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    @include mq($until: wide) {
+      position: relative;
+      padding: 15%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+      background-image: url(../img/texture.jpg);
+      background-position: bottom center;
+      background-size: cover;
+    }
+  }
+  
+  .hero__layout {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5% $gap;
+
+    @include mq($until: wide) {
+      padding: 0 $gap/2 0;
+      background: color(white);
+    }
+
+    .hero__content {
+      background: color(white);
+      z-index: 100;
+      padding: $gap;
+      position: relative;
+      align-self: flex-end;
+
+      @include mq($until: wide) {
+        justify-self: flex-end;
+        align-self: flex-start;
+        max-width: $max-width;
+        width: 100%;
+        margin: auto;
+        padding: $gap $gap / 2 $gap 0;
+      }
+    }
+  }
+}
+
+.hero--sub {
+  background: color(lt-gray);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: space(25) $gap / 2;
+  margin-bottom: space(20);
+  color: color(black);
+  z-index: 1;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.08;
+    mix-blend-mode: multiply;
+    background-image: url(../img/texture.jpg);
+    background-position: top center;
+    background-size: cover;
+    z-index: -2;
+  }
+}
+
+.hero--homepage {
+  h1 {
+    position: relative;
+    margin-top: 0.4em;
+    display: inline-block;
+
+    &:before {
+      content: '';
+      left: 10px;
+      top: 10px;
+      height: 100%;
+      width: 0%;
+      background: color(yellow);
+      position: absolute;
+      z-index: -1;
+      animation: expand 2s $ease forwards;
+      animation-delay: 2500ms;
+      animation-duration: 250ms;
+    }
+  }
+
+.hero__path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2s ease-out forwards;
+    animation-delay: 0s;
+    animation-duration: 3000ms;
+    fill:none;
+    stroke: #6928ff;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+  }
+
+  // Hack to fix issues in IE
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    &__path {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .w {
+    animation-delay: 1000ms;
+  }
+  
+  .ho {
+    animation-delay: 1200ms;
+  }
+  
+  .i-01 {
+    animation-delay: 1800ms;
+  }
+  
+  .s {
+    animation-delay: 2000ms;
+  }
+  
+  .i-02 {
+    animation-delay: 2300ms;
+  }
+
+  .line-01 {
+    animation-delay: 3400ms;
+    animation-duration: 1000ms;
+  }
+
+  .line-02 {
+    animation-delay: 3900ms;
+    animation-duration: 1000ms;
+  }
+
+  .qm-01 {
+    animation-delay: 4500ms;
+  }
+
+  .qm-02 {
+    animation-delay: 4700ms;
+  }
+  
+  #who-is {
+    width: 320px;
+    height: 153px;
+
+    @include mq($until:desktop) {
+      width: calc(320px * 0.75);
+      height: calc(153px * 0.75);
+    }
+
+    @include mq($until:tablet) {
+      width: calc(320px / 2);
+      height: calc(153px / 2);
+    }
+
+    @include mq($until:mobile) {
+      width: calc(320px / 3);
+      height: calc(153px / 3);
+    }
+    
+  }
+
+  #question-mark {
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    right: -12%;
+    top: -7%;
+
+    @include mq($until:desktop) {
+      width: calc(50px * 0.75);
+      height: calc(100px * 0.75);
+    }
+    
+    @include mq($until:tablet) {
+      width: calc(50px / 2);
+      height: calc(100px / 2);
+    }
+
+    @include mq($until:mobile) {
+      width: calc(50px / 3);
+      height: calc(100px / 3);
+    }
+
+    
+    .hero__path {
+        stroke-width: 2.2;
+    }
+  }
+
+  #lines {
+    height: 20px;
+    width: 440px;
+    bottom: -40%;
+    right: -4%;
+    position: absolute;
+
+    @include mq($until:desktop) {
+      height: calc(20px * 0.75);
+      width: calc(440px * 0.75);
+    }
+
+    @include mq($until:tablet) {
+      height: calc(20px / 2);
+      width: calc(440px / 2);
+    }
+
+    @include mq($until:mobile) {
+      height: calc(20px / 3);
+      width: calc(440px / 3);
+    }
+    
+    .hero__path {
+        stroke-width: 3;
+    }
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes expand {
+  to {
+      width: 40%;
+  }
+}

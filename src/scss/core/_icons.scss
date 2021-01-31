@@ -1,0 +1,18 @@
+[class^="icon-"], [class*=" icon-"] {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    fill: currentColor;
+}
+
+
+.hero .icon-arrow-down {
+    width: 20px;
+    height: 20px;
+
+    &.fadein-bounce {
+        animation-delay: 6s;
+        animation-duration: 600ms;
+    }
+   
+}

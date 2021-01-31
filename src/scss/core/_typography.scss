@@ -1,0 +1,40 @@
+@include typography($typography);
+
+@each $color-name, $color in $colors {
+    .t-#{$color-name} {
+      color: $color;
+    }
+}
+  
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: -0.25em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+strong {
+    font-weight: font-weight(bold);
+}
+
+body {
+    font-family: font-stack(primary);
+    color: color(black);
+}
+
+.t-cursive {
+    line-height: 0.5;
+    font-size: 2.71em;
+    text-transform: lowercase;
+    color: color(blue);
+    font-family: font-stack(accent);
+    font-weight: normal;
+}
