@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/cliff-hurst-logo.svg'
 import icons from '../img/icons.svg'
 
@@ -37,6 +36,9 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    // clean up active class on body
+    document.body.classList.remove('nav-active');
+
     return (
       <header className={`nav ${this.state.navBarActiveClass}`}>
           <Link to="/" className="nav__logo" title="Logo">
