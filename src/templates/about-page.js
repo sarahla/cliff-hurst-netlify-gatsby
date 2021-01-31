@@ -2,43 +2,32 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ 
+  title, 
+  content, 
+  contentComponent,
+  image,
+  description
+}) => {
   const PageContent = contentComponent || Content
 
   return (
     <div>
-      <section id="professor" className="hero--secondary" data-animate>
-            <div className="hero__image" style={{'backgroundImage':'url(../../assets/images/researcher.jpg)', 'backgroundPosition': 'top 35% center'}}></div>
-            <div className="hero__layout">
-                <div className="hero__content">
-                    <h2 className="t-h2 u-mr-2 u-mb-0">
-                        I am <br/>a&nbsp;<span className="t-cursive">{title}</span>
-                    </h2>
-                </div>
-            </div>    
-        </section>
+        <Hero title={title} image={image} />
         <main>
             <section className="wrapper u-mb-30">
+              <div className="content">
+                { description ? (
+                   <h3 class="u-mb-8">{description}</h3>
+                ): ''}
                 <PageContent className="content" content={content} />
+              </div>
             </section>
         </main>
     </div>
-    // <section className="section section--gradient">
-    //   <div className="container">
-    //     <div className="columns">
-    //       <div className="column is-10 is-offset-1">
-    //         <div className="section">
-    //           <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-    //             {title}
-    //           </h2>
-    //           <PageContent className="content" content={content} />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
   )
 }
 
@@ -46,6 +35,8 @@ AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  description: PropTypes.string,
 }
 
 const AboutPage = ({ data }) => {
@@ -57,6 +48,8 @@ const AboutPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        image={post.frontmatter.image}
+        description={post.frontmatter.description}
       />
     </Layout>
   )
@@ -74,6 +67,14 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        description
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
