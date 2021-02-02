@@ -13,7 +13,9 @@ const Navbar = class extends React.Component {
     }
 
     // clean up active class on body
-    document.body.classList.remove('nav-active');
+    if ( document ) {
+      document.body.classList.remove('nav-active');
+    }
   }
 
   toggleHamburger = () => {
