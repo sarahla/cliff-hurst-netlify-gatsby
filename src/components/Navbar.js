@@ -11,11 +11,11 @@ const Navbar = class extends React.Component {
       active: false,
       navBarActiveClass: '',
     }
+  }
 
+  componentDidMount() {
     // clean up active class on body
-    if ( document ) {
-      document.body.classList.remove('nav-active');
-    }
+    document.body.classList.remove('nav-active');
   }
 
   toggleHamburger = () => {
