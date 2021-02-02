@@ -20,6 +20,7 @@ a {
     text-decoration: none;
     font-weight: map-get($font-weights, bold);
     color: color(blue);
+    z-index: 1;
 
     &--cta {
         color: inherit;
