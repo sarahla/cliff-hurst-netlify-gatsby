@@ -4,10 +4,14 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
+import Poster from '../components/Poster'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({blurbs }) => (
-  <Features gridItems={blurbs} />
+  <>
+    <Poster />
+    <Features gridItems={blurbs} />
+  </>
 )
 
 IndexPageTemplate.propTypes = {
