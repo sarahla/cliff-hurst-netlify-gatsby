@@ -1,4 +1,5 @@
 ---
+templateKey: 'index-page'
 title: Who is Cliff Hurst?
 blurbs:
   - img: /img/cliff-commencement.jpg

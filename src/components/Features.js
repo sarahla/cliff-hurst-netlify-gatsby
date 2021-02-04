@@ -4,8 +4,8 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { Link } from 'gatsby'
 
 const FeatureGrid = ({ gridItems }) => (
+  gridItems ? (
   <div>
-    {console.log(gridItems)}
     {gridItems.map((item, index) => (
       <section className={`block ${index % 2 ? 'block--right' : 'block--left'} u-pt-10 u-pb-10 u-mb-20 m-u-mb-5`}>
           <div className="block__layout">
@@ -28,6 +28,7 @@ const FeatureGrid = ({ gridItems }) => (
       </section>
     ))}
   </div>
+  ) : 'No features to display.' 
   // <div className="columns is-multiline">
   //   {gridItems.map((item) => (
   //     <div key={item.text} className="column is-6">
