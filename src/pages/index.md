@@ -17,4 +17,10 @@ blurbs:
     text: I study entrepreneurs in their natural setting to figure out what makes
       them “tick.”
     url: /researcher
+  - img: /img/consultant.jpg
+    headline: Consultant
+    caption: No caption.
+    text: When you know yourself, you can grow yourself. What you don't know will
+      trip you up.
+    url: /consultant
 ---
