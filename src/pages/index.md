@@ -1,10 +1,11 @@
 ---
 title: Who is Cliff Hurst?
-templateKey: index-page
 blurbs:
-  - img: /img/consultant.jpg
-    caption: No Caption
-    headline: consultant
-    text: Test Test
-    url: /consultant
+  - img: /img/cliff-commencement.jpg
+    caption: |-
+      Me delivering the faculty address at MBA Pinning & Hooding
+      Westminster College in Salt Lake City, Utah
+    headline: professor
+    text: My philosophy of teaching is that learning can—and ought to be—a joy.
+    url: /professor
 ---
