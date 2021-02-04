@@ -1,5 +1,5 @@
 ---
-templateKey: 'index-page'
+templateKey: index-page
 title: Who is Cliff Hurst?
 blurbs:
   - img: /img/cliff-commencement.jpg
@@ -9,4 +9,12 @@ blurbs:
     headline: professor
     text: My philosophy of teaching is that learning can—and ought to be—a joy.
     url: /professor
+  - img: /img/researcher.jpg
+    headline: researcher
+    caption: |-
+      Q&A after keynote at 8th Annual StartUP Conference
+      April 2019 in Blagoevgrad, Bulgaria
+    text: I study entrepreneurs in their natural setting to figure out what makes
+      them “tick.”
+    url: /researcher
 ---
