@@ -23,4 +23,11 @@ blurbs:
     text: When you know yourself, you can grow yourself. What you don't know will
       trip you up.
     url: /consultant
+  - img: /img/spoons.jpg
+    caption: |-
+      A selection of my hand-carved
+      wooden spoons
+    headline: spooncarver
+    text: I love to hand carve wooden spoons. Go figure...
+    url: /spoon-carver
 ---
