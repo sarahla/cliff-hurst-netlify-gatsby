@@ -19,7 +19,7 @@ blurbs:
     url: /researcher
   - img: /img/consultant.jpg
     headline: Consultant
-    caption: No caption.
+    caption: " "
     text: When you know yourself, you can grow yourself. What you don't know will
       trip you up.
     url: /consultant
