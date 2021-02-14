@@ -26,7 +26,7 @@ function Poster() {
                         <path className="hero__path qm-02" d="M5.2,49.1c0,2,0,3.5,0,5.6"/>
                     </g>
                 </svg>
-                <svg version="1.1" id="lines" xmlns="http://www.w3.org/2000/svg" xmlnsXlinkk="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 360.4 12.1" xmlSpace="preserve">
+                <svg version="1.1" id="lines" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 360.4 12.1" xmlSpace="preserve">
                     <g>
                         <path className="hero__path line-01" d="M20.3,10.9c108-2.3,215.8,1.7,324-0.6"/>
                         <path className="hero__path line-02" d="M1,1c56,0.4,188.1,2.9,209,2.3c42.3-1.2,108,1.5,149.4,1.5"/>

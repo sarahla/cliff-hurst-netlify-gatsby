@@ -7,7 +7,7 @@ const FeatureGrid = ({ gridItems }) => (
   gridItems ? (
   <div>
     {gridItems.map((item, index) => (
-      <section className={`block ${index % 2 ? 'block--right' : 'block--left'} u-pt-10 u-pb-10 u-mb-20 m-u-mb-5`}>
+      <section key={item.url} className={`block ${index % 2 ? 'block--right' : 'block--left'} u-pt-10 u-pb-10 u-mb-20 m-u-mb-5`}>
           <div className="block__layout">
               <figure className="block__image">
                   <PreviewCompatibleImage imageInfo={item} />

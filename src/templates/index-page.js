@@ -7,7 +7,7 @@ import Features from '../components/Features'
 import Poster from '../components/Poster'
 import BlogRoll from '../components/BlogRoll'
 
-export const IndexPageTemplate = ({blurbs }) => (
+export const IndexPageTemplate = ({ blurbs }) => (
   <>
     <Poster />
     <Features gridItems={blurbs} />
