@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
+import TestimonialSection from '../components/TestimonialSection'
 import Content, { HTMLContent } from '../components/Content'
 
 export const TestimonialPageTemplate = ({ 
@@ -26,6 +27,7 @@ export const TestimonialPageTemplate = ({
                 <PageContent className="content" content={content} />
               </div>
             </section>
+            <TestimonialSection />
         </main>
     </div>
   )

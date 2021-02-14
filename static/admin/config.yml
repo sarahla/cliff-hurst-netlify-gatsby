@@ -41,11 +41,12 @@ collections:
         label: "Professor"
         name: "professor"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: image}
           - {label: "Description", name: "description", widget: string, required: false}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Testimonials", name: "testimonials", widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string, required: false}, {label: Style, name: style, widget: select, options: [basic, extended], default: basic}]}
       - file: "src/pages/researcher/index.md"
         label: "Researcher"
         name: "researcher"
