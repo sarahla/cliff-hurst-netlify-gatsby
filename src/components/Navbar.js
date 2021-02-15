@@ -56,9 +56,9 @@ const Navbar = class extends React.Component {
           <nav className="nav__slideout">
               <button className="nav__btn--close" onClick={() => this.toggleHamburger()}>
                   <svg className="icon-menu" viewBox="0 0 512 512">
-                      <path id="icon-menu-2" d="m491.3 235.3h-470.6c-11.4 0-20.7 9.3-20.7 20.7s9.3 20.7 20.7 20.7h470.6c11.4 0 20.7-9.3 20.7-20.7s-9.3-20.7-20.7-20.7z"></path>
-                      <path id="icon-menu-1" d="M491.3,78.4H20.7C9.3,78.4,0,87.7,0,99.1s9.3,20.7,20.7,20.7h470.6c11.4,0,20.7-9.3,20.7-20.7S502.7,78.4,491.3,78.4z"></path>
-                      <path id="icon-menu-3" d="m491.3 392.2h-470.6c-11.4 0-20.7 9.3-20.7 20.7s9.3 20.7 20.7 20.7h470.6c11.4 0 20.7-9.3 20.7-20.7s-9.3-20.7-20.7-20.7z"></path>
+                    <path id="icon-menu-2" d="m491.3 235.3h-470.6c-11.4 0-20.7 9.3-20.7 20.7s9.3 20.7 20.7 20.7h470.6c11.4 0 20.7-9.3 20.7-20.7s-9.3-20.7-20.7-20.7z"></path>
+                    <path id="icon-menu-1" d="M491.3,78.4H20.7C9.3,78.4,0,87.7,0,99.1s9.3,20.7,20.7,20.7h470.6c11.4,0,20.7-9.3,20.7-20.7S502.7,78.4,491.3,78.4z"></path>
+                    <path id="icon-menu-3" d="m491.3 392.2h-470.6c-11.4 0-20.7 9.3-20.7 20.7s9.3 20.7 20.7 20.7h470.6c11.4 0 20.7-9.3 20.7-20.7s-9.3-20.7-20.7-20.7z"></path>
                   </svg>
               </button>
               <h4 className="nav__title">About</h4>

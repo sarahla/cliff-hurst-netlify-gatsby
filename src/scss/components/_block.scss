@@ -151,7 +151,8 @@
     }
 
     /* Add some fun animation stuff if data-attribute exists */
-    &[data-animate] {
+    &[data-animate],
+    &.animate {
         transition: opacity 500ms $ease-gentle;
         opacity: 0;
         

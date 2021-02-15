@@ -1,6 +1,5 @@
 import React from 'react'
-
-import logo from '../img/logo.svg'
+import icons from '../img/icons.svg'
 
 function Poster() {
     return (
@@ -33,7 +32,7 @@ function Poster() {
                     </g>
                 </svg>
             </h1> 
-            <svg className="icon-arrow-down fadein-bounce"><use xlinkHref="../assets/images/icons.svg#icon-arrow-down"></use></svg>
+            <svg className="icon-arrow-down fadein-bounce"><use xlinkHref={`${icons}#icon-arrow-down`}></use></svg>
         </div>
     )
 }
