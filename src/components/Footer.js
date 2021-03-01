@@ -37,7 +37,7 @@ const Footer = class extends React.Component {
         </nav>
         <div className="grid">
             <div className="grid-col-12 grid-col-sm-12">
-                <p className="t-p2">Copyright © 2019 Cliff Hurst</p>
+                <p className="t-p2">Copyright © { new Date().getFullYear() } Cliff Hurst</p>
             </div>
             
         </div>

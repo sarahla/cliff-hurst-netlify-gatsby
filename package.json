@@ -29,6 +29,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
+    "react-scrollmagic": "^2.2.0",
     "sass-mq": "^5.0.1",
     "scrollmagic": "^2.0.8",
     "uuid": "^7.0.0"
