@@ -74,7 +74,8 @@
         justify-content: center;
         margin: auto;
         z-index: 0;
-        .word {
+        .word,
+        .animated-text {
             font-weight: font-weight(bold);
             display: inline-block;
             position: relative;
