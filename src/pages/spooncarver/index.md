@@ -1,7 +1,7 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /spoon-carver
-title: spooncarver
+title: spoon-carver
 image: /img/spoons.jpg
 ---
 ## Spoon carving? Go figure.
