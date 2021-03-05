@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import loadable from '@loadable/component'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import TestimonialSection from '../components/TestimonialSection/'
 import Content, { HTMLContent } from '../components/Content'
+const TestimonialSection = loadable(() => import('../components/TestimonialSection/'));
+
 
 export const TestimonialPageTemplate = ({ 
   title, 
@@ -27,7 +29,7 @@ export const TestimonialPageTemplate = ({
                 <PageContent className="content" content={content} />
               </div>
             </section>
-            <TestimonialSection />
+            { typeof window !== 'undefined' && <TestimonialSection /> }
         </main>
     </div>
   )
