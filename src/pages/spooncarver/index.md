@@ -1,7 +1,8 @@
 ---
-title: Spoon Carver
+templateKey: 'about-page'
+path: /spoon-carver
+title: spooncarver
 image: /img/spoons.jpg
-description: Spoon carving? Go figure.
 ---
 ## Spoon carving? Go figure.
 
