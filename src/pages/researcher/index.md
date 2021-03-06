@@ -3,9 +3,9 @@ templateKey: about-page
 path: /researcher
 title: Researcher
 image: /img/researcher.jpg
-description: "### I am a student and scholar of the work of the late Dr. Robert
-  S. Hartman \\[1910-1973]. Hartman developed a theory of the logic of human
-  values known as formal axiology."
+description: " I am a student and scholar of the work of the late Dr. Robert S.
+  Hartman [1910-1973]. Hartman developed a theory of the logic of human values
+  known as formal axiology."
 ---
 “Axiology” is used as a general term in philosophy to refer to the study of values. Hartman’s formal axiology is a particular approach to the study of values. It is considered “formal” because it is based upon deductive logic. In much the same way that Galileo began to unlock the mathematical logic that governs the functioning of the physical world, Hartman began to unlock the axio-logic that governs the functioning of our social, moral, and ethical world. He made an exciting discovery that deserves more research.
 
