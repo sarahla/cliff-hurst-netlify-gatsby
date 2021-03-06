@@ -1,11 +1,10 @@
 ---
-templateKey: 'about-page'
+templateKey: about-page
 path: /spoon-carver
 title: spooncarver
 image: /img/spoons.jpg
+description: Spoon carving? Go figure.
 ---
-## Spoon carving? Go figure.
-
 A few years ago, my wife, Dayna, said to me, *“Cliff you spend too much time in your head. All you ever talk about is your teaching and your research. You need a hobby.”*
 
 She was right. But, what hobby should I take up? With her encouragement, I signed up for a 3-day spoon carving class that was taught concurrently with a course she was interested in at the John C. Campbell Folk School in North Carolina. I’ve been hooked since then.
