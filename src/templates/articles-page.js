@@ -5,9 +5,15 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
 export const ArticlesPageTemplate = ({ articles }) => (
-  <>
-    {/* <Features gridItems={articles} /> */}
-  </>
+  <ul>
+    {
+      articles.map( article => (
+        <li>
+          <a href={article.pdf}> {article.title} </a>
+        </li>
+      ))
+    }
+  </ul>
 )
 
 ArticlesPageTemplate.propTypes = {
@@ -42,6 +48,10 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "articles-page" } }) {
       frontmatter {
         title
+        articles {
+          title
+          pdf
+        }
       }
     }
   }
