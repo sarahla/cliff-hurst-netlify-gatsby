@@ -3,9 +3,8 @@ templateKey: testimonial-page
 path: /professor
 title: professor
 image: /img/cliff-commencement.jpg
+description: I was born to teach. It just took me nearly 5 decades to realize it.
 ---
-### I was born to teach. It just took me nearly 5 decades to realize it.
-
 I’ve been teaching one thing or another all of my life. Only in the past seven years, though, have I experienced the joy and intrinsic satisfaction that come from being a full-time professor.
 
 I’m an associate professor at Westminster College in Salt Lake City, Utah. I’m a member of the management faculty of the Bill and Vieve Gore School of Business there. I teach entrepreneurship and social entrepreneurship at both the undergraduate and MBA level.
