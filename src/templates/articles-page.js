@@ -4,16 +4,29 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 
-export const ArticlesPageTemplate = ({ articles }) => (
-  <ul>
-    {
-      articles.map( article => (
-        <li>
-          <a href={article.pdf}> {article.title} </a>
-        </li>
-      ))
-    }
-  </ul>
+export const ArticlesPageTemplate = ({ title, articles }) => (
+  <>
+    <section class="hero--sub in-view" data-animate="">
+        <h1 class="t-h1 u-mb-0">
+            {title}
+        </h1>
+    </section>
+    <main>
+        <section class="wrapper u-mb-30">
+          <div>
+            <ul class="list list--plain list--downloads">
+              {
+                articles.map( article => (
+                  <li className="t-h5">
+                    <a className="link" target="_blank" noopener href={article.pdf.absolutePath}> {article.title} </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </section>
+    </main>
+  </>
 )
 
 ArticlesPageTemplate.propTypes = {
@@ -25,8 +38,9 @@ const ArticlesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   console.log(frontmatter);
   return (
-    <Layout hideLogo={true}>
+    <Layout>
       <ArticlesPageTemplate
+        title={frontmatter.title}
         articles={frontmatter.articles}
       />
     </Layout>
@@ -50,7 +64,9 @@ export const pageQuery = graphql`
         title
         articles {
           title
-          pdf
+          pdf {
+            absolutePath
+          }
         }
       }
     }
