@@ -18,7 +18,7 @@ export const ArticlesPageTemplate = ({ title, articles }) => (
               {
                 articles.map( article => (
                   <li className="t-h5">
-                    <a className="link" target="_blank" noopener href={article.pdf.absolutePath}> {article.title} </a>
+                    <a className="link" target="_blank" noopener href={article.pdf.publicURL}> {article.title} </a>
                   </li>
                 ))
               }
@@ -65,7 +65,7 @@ export const pageQuery = graphql`
         articles {
           title
           pdf {
-            absolutePath
+            publicURL
           }
         }
       }
