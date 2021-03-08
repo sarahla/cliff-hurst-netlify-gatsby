@@ -7,6 +7,7 @@ function TestimonialCard(props) {
     const ref = useRef();
 
     const animateChildren = () => {
+        console.log('invoke animateChildren')
         let count = 1;
         return React.Children.map(children, child => {
             if (child.type && child.type.name === 'AnimatedText') {
@@ -21,6 +22,7 @@ function TestimonialCard(props) {
     }
     
     useEffect(() => {
+        console.log('registering scene controller')
         if (onMount) onMount(ref);
 
         new ScrollMagic.Scene({
@@ -31,8 +33,9 @@ function TestimonialCard(props) {
         })
         .reverse(false)
         .addTo(controller);
-    });
+    }, []);
 
+    console.log('rendering testimonial card', {inView})
     return (
         <div className="testimonial__block-container" ref={ref}>
             <div className="testimonial__block u-bg-white">

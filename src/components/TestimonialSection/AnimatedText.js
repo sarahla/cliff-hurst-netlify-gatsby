@@ -6,7 +6,9 @@ function AnimatedText(props) {
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
+        console.log('inView has changed', {inView})
         if (inView) {
+            console.log('creating timeout')
             const timeout = window.setTimeout(()=> { setAnimate(inView) }, delay);
             return () => {
                 // Clean up the setTimeout
@@ -15,6 +17,7 @@ function AnimatedText(props) {
         }
     }, [inView])
 
+    console.log('rendering AnimateText', {animate})
     return (
         <span className={`animated-text ${animate ? 'in-view' : ''}`} ref={ref}>{children}</span>
     )
