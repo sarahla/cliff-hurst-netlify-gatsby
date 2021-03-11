@@ -11,7 +11,7 @@ function TestimonialCard(props) {
     const animateChildren = () => {
         let count = 1;
         return React.Children.map(children, child => {
-            if (child?.type?.prototype?.componentName === AnimatedText.prototype.componentName) {
+            if (child && child.type && child.type && child.type.componentName === AnimatedText.componentName) {
                 console.log({child});
 
                 count ++;
