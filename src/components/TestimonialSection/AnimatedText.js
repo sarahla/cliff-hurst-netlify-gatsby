@@ -6,7 +6,7 @@ function AnimatedText(props) {
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
-        console.log('inView has changed', {inView})
+        console.log('inView has changed', {inView, children, delay})
         if (inView) {
             console.log('creating timeout')
             const timeout = window.setTimeout(()=> { setAnimate(inView) }, delay);

@@ -62,10 +62,10 @@ function TestimonialSection(props) {
                     </div>
                     <div className="testimonial__grid">
                         <TestimonialCard controller={controller}>
-                            "The course actually hits every question on this survey spot on. I learned a lot in this class about the subject, improved my writing skills and all the Westminster college-wide learning goals. Cliff is also the most <AnimatedText inView>kind</AnimatedText>, <AnimatedText inView>optimistic</AnimatedText>, and <AnimatedText inView>generous</AnimatedText> professor I’ve ever had. Thanks!"
+                            "The course actually hits every question on this survey spot on. I learned a lot in this class about the subject, improved my writing skills and all the Westminster college-wide learning goals. Cliff is also the most <AnimatedText>kind</AnimatedText>, <AnimatedText>optimistic</AnimatedText>, and <AnimatedText>generous</AnimatedText> professor I’ve ever had. Thanks!"
                         </TestimonialCard>
                         <TestimonialCard controller={controller}>
-                            "Great teacher; very <AnimatedText inView>respectful</AnimatedText> of all opinions of the students."
+                            "Great teacher; very <AnimatedText>respectful</AnimatedText> of all opinions of the students."
                         </TestimonialCard>
                         <TestimonialCard controller={controller} textStyle="t-h5">
                             "Cliff does a great job of relating the subject of entrepreneurship to his real-life experiences."
