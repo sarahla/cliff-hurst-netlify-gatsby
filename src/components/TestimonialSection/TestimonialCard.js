@@ -17,6 +17,7 @@ function TestimonialCard(props) {
                     delay: 500 * count,
                     inView: true
                 })
+                console.log(cloneChild);
                 return cloneChild;
             }
             return child;
