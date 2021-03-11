@@ -12,12 +12,14 @@ function TestimonialCard(props) {
         let count = 1;
         return React.Children.map(children, child => {
             if (child?.type?.prototype?.componentName === AnimatedText.prototype.componentName) {
+                console.log({child});
+
                 count ++;
                 const cloneChild = React.cloneElement(child, {
                     delay: 500 * count,
                     inView: true
                 })
-                console.log(cloneChild);
+                console.log({cloneChild});
                 return cloneChild;
             }
             return child;
