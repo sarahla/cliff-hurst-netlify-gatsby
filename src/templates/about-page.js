@@ -21,7 +21,7 @@ export const AboutPageTemplate = ({
             <section className="wrapper u-mb-30">
               <div className="content">
                 { description ? (
-                   <h2 class="t-h5 u-mb-8">{description}</h2>
+                   <h2 className="t-h5 u-mb-8">{description}</h2>
                 ): ''}
                 <PageContent className="content" content={content} />
               </div>

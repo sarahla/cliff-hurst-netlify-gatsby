@@ -69,6 +69,12 @@ const Navbar = class extends React.Component {
                   <li><Link to="/spoon-carver/">Spoon Carving</Link></li>
               </ul>
 
+              <h4 className="nav__title">Writings</h4>
+              <ul className="nav__list">
+                  <li><Link to="/articles/">Articles</Link></li>
+                  <li><Link to="/blog/">Blog</Link></li>
+              </ul>
+
               <h4 className="nav__title">Connect</h4>
               <ul className="nav__list">
                   <li><a href="mailto:clif@cliffordhurst.com">Email Me</a></li>

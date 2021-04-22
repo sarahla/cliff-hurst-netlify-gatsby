@@ -3,22 +3,19 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
 
 export const ArticlesPageTemplate = ({ title, articles }) => (
   <>
-    <section class="hero--sub in-view" data-animate="">
-        <h1 class="t-h1 u-mb-0">
-            {title}
-        </h1>
-    </section>
+    <Hero title={title} style="sub" />
     <main>
-        <section class="wrapper u-mb-30">
+        <section className="wrapper u-mb-30">
           <div>
-            <ul class="list list--plain list--downloads">
+            <ul className="list list--plain list--downloads">
               {
                 articles.map( article => (
                   <li className="t-h5">
-                    <a className="link" target="_blank" noopener href={article.pdf.publicURL}> {article.title} </a>
+                    <a className="link" target="_blank" noopener="true" href={article.pdf.publicURL}> {article.title} </a>
                   </li>
                 ))
               }

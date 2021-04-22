@@ -13,34 +13,32 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  date,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="wrapper">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+      <div className="container content u-mb-15">
+        {tags && tags.length ? (
+          <div style={{ marginTop: `4rem` }}>
+            <ul style={{ justifyContent: 'center' }} className="list list--plain list--inline">
+              {tags.map((tag) => (
+                <li key={tag + `tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ) : null}
+        <h1 className="title t-h1 u-center">
+          {title}
+        </h1>
+        <p className="u-center">{date}</p>
+        <p className="u-center">{description}</p>
+        <PostContent content={content} />
+        <p className="u-center u-mt-15">&mdash;</p>
       </div>
     </section>
   )
@@ -74,6 +72,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
       />
     </Layout>
   )

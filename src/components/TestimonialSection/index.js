@@ -7,7 +7,6 @@ import TestimonialCard from './TestimonialCard';
 
 
 function TestimonialSection(props) {
-    console.log('creating scrollmagic controller')
     const controller = new ScrollMagic.Controller({
         globalSceneOptions: {
             triggerHook: "onCenter"

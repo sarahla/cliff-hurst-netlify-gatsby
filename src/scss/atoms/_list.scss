@@ -3,6 +3,17 @@
         margin-bottom: space(5);
     }
 
+    &--inline {
+        display: flex;
+
+        li {
+            margin-right: space(3);
+            &:not(:last-child)::after {
+                content: ',';
+            }
+        }
+    }
+
     &--plain {
         list-style: none;
         padding: 0;

@@ -22,8 +22,8 @@ const Footer = class extends React.Component {
             <div className="grid-col-2 grid-col-t-4">
                 <h4 className="nav__title u-c-blue">Writings</h4>
                 <ul className="nav__list">
-                    
                     <li><Link to="/articles/">Articles</Link></li>
+                    <li><Link to="/blog/">Blog</Link></li>
                 </ul>
             </div>
             <div className="grid-col-2 grid-col-t-4">
