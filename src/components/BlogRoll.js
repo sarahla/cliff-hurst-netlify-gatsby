@@ -3,6 +3,17 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
+const ImagePlaceholder = function (props) {
+  const { children, aspectRatio } = props;
+  const padding = (1 / aspectRatio) * 100;
+  console.log(padding);
+  return (
+    <div className="placeholder" style={{ paddingTop: `${padding}%` }}>
+      {children}
+    </div>
+  )
+}
+
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -12,44 +23,44 @@ class BlogRoll extends React.Component {
       <div className="grid blog-list">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="grid-col-6" key={post.id}>
+            <div className="grid-col-6 u-mb-6" key={post.id}>
               <article
-                className={`blog-list__item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
+                className={`blog-list__item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
+                  }`}
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div className="blog-list__item__thumb">
                       <PreviewCompatibleImage
                         imageInfo={{
+                          aspectRatio: 1.618,
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                         }}
                       />
                     </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <span className="t-h5">
+                  ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
+                  <p className="post-meta u-mt-6">
+                    <span className="u-upper t-eyebrow">
                       {post.frontmatter.date}
                     </span>
                     <br />
-                    <Link
-                      className="t-h3"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
+                    <h3 className="t-h4 u-mt-2 u-mb-4">
+                      <Link
+                        className="link"
+                        to={post.fields.slug}
+                      >
+                        {post.frontmatter.title}
+                      </Link>
+                    </h3>
                   </p>
                 </header>
-                <p className="t-lead2">
+                <p className="t-lead4 u-mb-4">
                   {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="link link--cta link--cta--small" to={post.fields.slug}>
-                    Keep Reading
-                  </Link>
                 </p>
+                <Link className="link link--cta link--cta--small" to={post.fields.slug}>
+                  Keep Reading
+                </Link>
               </article>
             </div>
           ))}
@@ -76,7 +87,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 250)
               id
               fields {
                 slug

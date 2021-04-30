@@ -9,19 +9,19 @@ export const ArticlesPageTemplate = ({ title, articles }) => (
   <>
     <Hero title={title} style="sub" />
     <main>
-        <section className="wrapper u-mb-30">
-          <div>
-            <ul className="list list--plain list--downloads">
-              {
-                articles.map( article => (
-                  <li className="t-h5">
-                    <a className="link" target="_blank" noopener="true" href={article.pdf.publicURL}> {article.title} </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-        </section>
+      <section className="wrapper u-mb-30">
+        <div>
+          <ul className="list list--plain list--downloads">
+            {
+              articles.map(article => (
+                <li className="t-h5">
+                  <a className="link" target="_blank" rel="noreferrer" noopener="true" href={article.pdf.publicURL}> {article.title} </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </section>
     </main>
   </>
 )

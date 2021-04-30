@@ -55,4 +55,25 @@
             }
         }
     }
+
+    &--tags {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+
+        li {
+            display: block;
+            background: color(lt-gray);
+            padding: space(1) space(2);
+            margin: space(2);
+            border-radius: 5px;
+            @extend .t-lead2;
+
+            .list--tags__count {
+                font-size: 0.75em;
+                font-weight: font-weight(normal);
+                vertical-align: top;
+            }
+        }
+    }
 }

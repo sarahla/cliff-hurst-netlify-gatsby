@@ -61,38 +61,40 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'IBM Plex Serif';
-    src: url('/fonts/IBMPlexSerif-LightItalic.woff2') format('woff2'),
-        url('/fonts/IBMPlexSerif-LightItalic.woff') format('woff'),
-        url('/fonts/IBMPlexSerif-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,600;1,300;1,600&display=swap');
 
-@font-face {
-    font-family: 'IBM Plex Serif';
-    src: url('/fonts/IBMPlexSerif-Light.woff2') format('woff2'),
-        url('/fonts/IBMPlexSerif-Light.woff') format('woff'),
-        url('/fonts/IBMPlexSerif-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'IBM Plex Serif';
+//     src: url('/fonts/IBMPlexSerif-LightItalic.woff2') format('woff2'),
+//         url('/fonts/IBMPlexSerif-LightItalic.woff') format('woff'),
+//         url('/fonts/IBMPlexSerif-LightItalic.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: italic;
+// }
 
-@font-face {
-    font-family: 'IBM Plex Serif';
-    src: url('/fonts/IBMPlexSerif-SemiBold.woff2') format('woff2'),
-        url('/fonts/IBMPlexSerif-SemiBold.woff') format('woff'),
-        url('/fonts/IBMPlexSerif-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'IBM Plex Serif';
+//     src: url('/fonts/IBMPlexSerif-Light.woff2') format('woff2'),
+//         url('/fonts/IBMPlexSerif-Light.woff') format('woff'),
+//         url('/fonts/IBMPlexSerif-Light.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: 'IBM Plex Serif';
-    src: url('/fonts/IBMPlexSerif-SemiBoldItalic.woff2') format('woff2'),
-        url('/fonts/IBMPlexSerif-SemiBoldItalic.woff') format('woff'),
-        url('/fonts/IBMPlexSerif-SemiBoldItalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-}
+// @font-face {
+//     font-family: 'IBM Plex Serif';
+//     src: url('/fonts/IBMPlexSerif-SemiBold.woff2') format('woff2'),
+//         url('/fonts/IBMPlexSerif-SemiBold.woff') format('woff'),
+//         url('/fonts/IBMPlexSerif-SemiBold.ttf') format('truetype');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'IBM Plex Serif';
+//     src: url('/fonts/IBMPlexSerif-SemiBoldItalic.woff2') format('woff2'),
+//         url('/fonts/IBMPlexSerif-SemiBoldItalic.woff') format('woff'),
+//         url('/fonts/IBMPlexSerif-SemiBoldItalic.ttf') format('truetype');
+//     font-weight: 600;
+//     font-style: italic;
+// }

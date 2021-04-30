@@ -4,15 +4,17 @@ import Img from 'gatsby-image'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: '0px' }
-  const { alt = '', childImageSharp, image } = imageInfo
+  const { alt = '', childImageSharp, image, aspectRatio } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
+    const fluid = aspectRatio ? { ...image.childImageSharp.fluid, aspectRatio } : image.childImageSharp.fluid;
     return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
+      <Img style={imageStyle} fluid={fluid} alt={alt} />
     )
   }
 
   if (!!childImageSharp) {
+    const fluid = aspectRatio ? { ...childImageSharp.fluid, aspectRatio } : childImageSharp.fluid;
     return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
   }
 

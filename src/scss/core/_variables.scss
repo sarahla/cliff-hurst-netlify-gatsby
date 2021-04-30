@@ -2,7 +2,7 @@ $browser-context: 16px;
 
 $font-stacks: (
     primary: #{'Montserrat', Arial, sans-serif},
-    secondary: #{'IBM Plex Serif', Georgia, serif},
+    secondary: #{'Bitter', Georgia, serif},
     accent: #{'Santiago Pro', Arial, sans-serif}
 );
 
@@ -215,6 +215,18 @@ $typography: (
             line-height: 1.5
         )
     ),
+    lead4: (
+        base: (
+            font-family: map-get($font-stacks, primary),
+            font-size: 16px,
+            line-height: 1.5,
+            font-weight: map-get($font-weights, light),
+        ),
+        desktop: (
+            font-size: 16px,
+            line-height: 1.5
+        )
+    ),
     caption: (
         base: (
             font-family: map-get($font-stacks, primary),
@@ -227,7 +239,17 @@ $typography: (
             font-size: 16px,
             line-height: 1.5
         )
-    )
+    ),
+    eyebrow: (
+        base: (
+            font-family: map-get($font-stacks, primary),
+            font-size: 14px,
+            line-height: 1.5,
+            font-weight: map-get($font-weights, bold),
+            text-transform: uppercase,
+            letter-spacing: 0.05em,
+        )
+    ),
 );
 
 $colors: (

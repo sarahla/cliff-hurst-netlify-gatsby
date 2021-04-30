@@ -1,0 +1,18 @@
+.placeholder {
+    background-color: color(lt-gray);
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url(../img/texture.jpg);
+        background-blend-mode: multiply;
+        z-index: 0;
+        background-size: cover;
+        opacity: 0.08;
+    }
+}

@@ -34,6 +34,10 @@ body {
 @import 'components/testimonials';
 @import 'components/teaser';
 @import 'components/blog';
+@import 'components/placeholder';
 
 // Utilites and Helpers
 @import 'core/_utilities';
+
+// Overrides
+@import 'core/_overrides';

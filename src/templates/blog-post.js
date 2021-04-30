@@ -20,7 +20,7 @@ export const BlogPostTemplate = ({
   return (
     <section className="wrapper">
       {helmet || ''}
-      <div className="container content u-mb-15">
+      <div className="container u-mb-15 blog-post">
         {tags && tags.length ? (
           <div style={{ marginTop: `4rem` }}>
             <ul style={{ justifyContent: 'center' }} className="list list--plain list--inline">
@@ -35,9 +35,11 @@ export const BlogPostTemplate = ({
         <h1 className="title t-h1 u-center">
           {title}
         </h1>
-        <p className="u-center">{date}</p>
-        <p className="u-center">{description}</p>
-        <PostContent content={content} />
+        <p className="u-center t-uppercase">{date}</p>
+        {description &&
+          <p className="t-lead1 blog-post__description">{description}</p>
+        }
+        <PostContent className="content" content={content} />
         <p className="u-center u-mt-15">&mdash;</p>
       </div>
     </section>
