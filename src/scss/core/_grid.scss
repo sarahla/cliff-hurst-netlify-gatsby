@@ -3,6 +3,10 @@
     grid-template-columns: minmax($gap/2, 1fr) minmax(0, $max-width) minmax($gap/2, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "left content right";
+
+    &--wide {
+        grid-template-columns: minmax($gap/2, 1fr) minmax(0, $max-width-wide) minmax($gap/2, 1fr);
+    }
     
     &::before{ grid-area: left; }
     &::after { grid-area: right }

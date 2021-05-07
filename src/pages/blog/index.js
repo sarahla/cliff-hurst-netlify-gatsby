@@ -10,11 +10,11 @@ export default class BlogIndexPage extends React.Component {
       <Layout>
         <Hero title="Recent Posts" style="sub" />
         <main>
-            <section className="wrapper u-mb-30">
-              <div>
-                <BlogRoll />
-              </div>
-            </section>
+          <section className="u-mb-30 wrapper wrapper--wide">
+            <div>
+              <BlogRoll />
+            </div>
+          </section>
         </main>
       </Layout>
     )

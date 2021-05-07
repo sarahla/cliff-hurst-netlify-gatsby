@@ -23,46 +23,45 @@ class BlogRoll extends React.Component {
       <div className="grid blog-list">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="grid-col-6 u-mb-6" key={post.id}>
-              <article
-                className={`blog-list__item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
-                  }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="blog-list__item__thumb">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          aspectRatio: 1.618,
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
-                  <p className="post-meta u-mt-6">
-                    <span className="u-upper t-eyebrow">
-                      {post.frontmatter.date}
-                    </span>
-                    <br />
-                    <h3 className="t-h4 u-mt-2 u-mb-4">
-                      <Link
-                        className="link"
-                        to={post.fields.slug}
-                      >
-                        {post.frontmatter.title}
-                      </Link>
-                    </h3>
-                  </p>
-                </header>
-                <p className="t-lead4 u-mb-4">
-                  {post.excerpt}
-                </p>
-                <Link className="link link--cta link--cta--small" to={post.fields.slug}>
-                  Keep Reading
-                </Link>
-              </article>
-            </div>
+            <article
+              key={post.id}
+              className={`blog-list__item tile is-child box notification u-mb-4 ${post.frontmatter.featuredpost ? 'is-featured grid-col-4' : 'grid-col-4'
+                }`}
+            >
+              <header>
+                {post.frontmatter.featuredimage ? (
+                  <div className="blog-list__item__thumb">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        aspectRatio: 1.618,
+                        image: post.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                      }}
+                    />
+                  </div>
+                ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
+                <div className="post-meta u-mt-6">
+                  <span className="u-upper t-eyebrow">
+                    {post.frontmatter.date}
+                  </span>
+                  <br />
+                  <h3 className="t-h4 u-mt-2 u-mb-4">
+                    <Link
+                      className="link"
+                      to={post.fields.slug}
+                    >
+                      {post.frontmatter.title}
+                    </Link>
+                  </h3>
+                </div>
+              </header>
+              <p className="t-lead4 u-mb-4">
+                {post.excerpt}
+              </p>
+              <Link className="link link--cta link--cta--small" to={post.fields.slug}>
+                Keep Reading
+              </Link>
+            </article>
           ))}
       </div>
     )
