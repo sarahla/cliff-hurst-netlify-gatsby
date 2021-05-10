@@ -15,4 +15,4 @@ But boats take a lot of time, money, and space to build. I needed a hobby where 
 
 And, spoons are made—if they are made well—of fair curves. I take great joy in letting the grain of the wood dictate the shape that each spoon should take. Where the curves of a boat are built up from a combination of wood, fasteners, and glue, the curves of a spoon are simply revealed by carving away excess until only the spoon remains. They are simple. A single piece of wood. I like that.
 
-I’m pleased to share here photos of some of the spoons I’ve carved, as well as some of my ramblings about the joy that spoon carving brings me.
+I’m pleased to share here photos of some of the spoons I’ve carved, as well as some of my ramblings about the joy that spoon carving brings me. Visit my spoon carving website [www.carvedbycliff.com](http://www.carvedbycliff.com/)
