@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   console.log(frontmatter);
   return (
-    <Layout hideLogo={true}>
+    <Layout location="blog" hideLogo={true}>
       <IndexPageTemplate
         blurbs={frontmatter.blurbs}
       />

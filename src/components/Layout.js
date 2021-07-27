@@ -6,7 +6,7 @@ import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children, hideLogo }) => {
+const TemplateWrapper = ({ children, hideLogo, location = 'general' }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children, hideLogo }) => {
       </Helmet>
       <Navbar hideLogo={hideLogo} />
       <div>{children}</div>
-      <Footer />
+      <Footer {...{ location }} />
     </div>
   )
 }

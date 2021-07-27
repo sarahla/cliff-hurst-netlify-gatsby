@@ -8,9 +8,9 @@ import Content, { HTMLContent } from '../components/Content'
 const TestimonialSection = loadable(() => import('../components/TestimonialSection/'));
 
 
-export const TestimonialPageTemplate = ({ 
-  title, 
-  content, 
+export const TestimonialPageTemplate = ({
+  title,
+  content,
   contentComponent,
   image,
   description
@@ -19,18 +19,18 @@ export const TestimonialPageTemplate = ({
 
   return (
     <div>
-        <Hero title={title} image={image} />
-        <main>
-            <section className="wrapper u-mb-30">
-              <div className="content">
-                { description ? (
-                   <h2 className="t-h5 u-mb-8">{description}</h2>
-                ): ''}
-                <PageContent className="content" content={content} />
-              </div>
-            </section>
-            { typeof window !== 'undefined' && <TestimonialSection /> }
-        </main>
+      <Hero title={title} image={image} />
+      <main>
+        <section className="wrapper u-mb-30">
+          <div className="content">
+            {description ? (
+              <h2 className="t-h5 u-mb-8">{description}</h2>
+            ) : ''}
+            <PageContent className="content" content={content} />
+          </div>
+        </section>
+        {typeof window !== 'undefined' && <TestimonialSection />}
+      </main>
     </div>
   )
 }
@@ -45,9 +45,9 @@ TestimonialPageTemplate.propTypes = {
 
 const TestimonialPage = ({ data }) => {
   const { markdownRemark: post } = data
-
+  const location = post.frontmatter.title?.toLowerCase();
   return (
-    <Layout>
+    <Layout {...{ location }}>
       <TestimonialPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

@@ -1,0 +1,6 @@
+.button {
+    background-color: color(yellow);
+    padding: 1rem 2.5rem;
+    @include type-style(p2);
+    font-weight: map-get($font-weights, bold);
+}

@@ -33,9 +33,8 @@ ArticlesPageTemplate.propTypes = {
 
 const ArticlesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter);
   return (
-    <Layout>
+    <Layout location="articles" >
       <ArticlesPageTemplate
         title={frontmatter.title}
         articles={frontmatter.articles}

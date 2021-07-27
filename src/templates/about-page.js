@@ -5,9 +5,9 @@ import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ 
-  title, 
-  content, 
+export const AboutPageTemplate = ({
+  title,
+  content,
   contentComponent,
   image,
   description
@@ -16,17 +16,17 @@ export const AboutPageTemplate = ({
 
   return (
     <div>
-        <Hero title={title} image={image} />
-        <main>
-            <section className="wrapper u-mb-30">
-              <div className="content">
-                { description ? (
-                   <h2 className="t-h5 u-mb-8">{description}</h2>
-                ): ''}
-                <PageContent className="content" content={content} />
-              </div>
-            </section>
-        </main>
+      <Hero title={title} image={image} />
+      <main>
+        <section className="wrapper u-mb-30">
+          <div className="content">
+            {description ? (
+              <h2 className="t-h5 u-mb-8">{description}</h2>
+            ) : ''}
+            <PageContent className="content" content={content} />
+          </div>
+        </section>
+      </main>
     </div>
   )
 }
@@ -40,10 +40,10 @@ AboutPageTemplate.propTypes = {
 }
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
-
+  const { markdownRemark: post } = data;
+  const location = post.frontmatter.title?.toLowerCase();
   return (
-    <Layout>
+    <Layout {...{ location }}>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
