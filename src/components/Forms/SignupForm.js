@@ -12,7 +12,7 @@ const CustomForm = ({ status, message, onValidated, location }) => {
             email.value.indexOf("@") > -1 &&
             onValidated({
                 EMAIL: email.value,
-                NAME: name.value,
+                FNAME: name.value,
                 INTEREST: interest.value,
             })
         )
@@ -27,48 +27,52 @@ const CustomForm = ({ status, message, onValidated, location }) => {
             )}
             {status === "error" && (
                 <div
-                    className="form__error"
+                    className="form__message form__error"
                     dangerouslySetInnerHTML={{ __html: message }}
                 />
             )}
             {status === "success" && (
                 <div
-                    className="form__success"
+                    className="form__message form__success"
                     dangerouslySetInnerHTML={{ __html: message }}
                 />
             )}
-            <div className="u-mb-6" style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'stretch' }}>
-                <div className="form__field-group u-mr-6">
-                    <label className="t-eyebrow u-mb-2" for="name">Name</label>
+            {status !== "success" && (
+                <>
+                    <div className="u-mb-6" style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'stretch' }}>
+                        <div className="form__field-group u-mr-6">
+                            <label className="t-eyebrow u-mb-2" for="name">Name</label>
+                            <input
+                                className="form__field"
+                                ref={node => (name = node)}
+                                type="text"
+                                placeholder="Your name"
+                                id="name"
+                            />
+                        </div>
+                        <div className="form__field-group">
+                            <label className="t-eyebrow u-mb-2" for="email">Email</label>
+                            <input
+                                className="form__field"
+                                ref={node => (email = node)}
+                                type="email"
+                                placeholder="Your email"
+                                id="email"
+                            />
+                        </div>
+                    </div>
                     <input
                         className="form__field"
-                        ref={node => (name = node)}
-                        type="text"
-                        placeholder="Your name"
-                        id="name"
+                        ref={node => (interest = node)}
+                        type="hidden"
+                        placeholder="Interest"
+                        value={location}
                     />
-                </div>
-                <div className="form__field-group">
-                    <label className="t-eyebrow u-mb-2" for="email">Email</label>
-                    <input
-                        className="form__field"
-                        ref={node => (email = node)}
-                        type="email"
-                        placeholder="Your email"
-                        id="email"
-                    />
-                </div>
-            </div>
-            <input
-                className="form__field"
-                ref={node => (interest = node)}
-                type="hidden"
-                placeholder="Interest"
-                value={location}
-            />
-            <button className="button" onClick={submit}>
-                Submit
-        </button>
+                    <button className="button" onClick={submit}>
+                        Submit
+                </button>
+                </>
+            )}
         </div>
     );
 };

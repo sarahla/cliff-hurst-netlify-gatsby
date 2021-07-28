@@ -33,11 +33,19 @@
         z-index: 1;
     }
 
-    .form__error {
-        color: red;
+    .form__message {
         margin: 2rem 0;
         padding: 1rem;
-        border: 1px solid red;
+        border: 1px solid;
+        line-height: 1.5;
+    }
+
+    .form__error {
+        color: red;
+    }
+
+    .form__success {
+        color: color(blue);
     }
 
     .form__field-group {
