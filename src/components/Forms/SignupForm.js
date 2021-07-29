@@ -1,5 +1,5 @@
 import React from 'react';
-import MailchimpSubscribe from "react-mailchimp-subscribe"
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 const CustomForm = ({ status, message, onValidated, location }) => {
     let email, name, interest;
@@ -41,7 +41,7 @@ const CustomForm = ({ status, message, onValidated, location }) => {
                 <>
                     <div className="u-mb-6" style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'stretch' }}>
                         <div className="form__field-group u-mr-6">
-                            <label className="t-eyebrow u-mb-2" for="name">Name</label>
+                            <label className="t-eyebrow u-mb-2" htmlFor="name">Name</label>
                             <input
                                 className="form__field"
                                 ref={node => (name = node)}
@@ -51,7 +51,7 @@ const CustomForm = ({ status, message, onValidated, location }) => {
                             />
                         </div>
                         <div className="form__field-group">
-                            <label className="t-eyebrow u-mb-2" for="email">Email</label>
+                            <label className="t-eyebrow u-mb-2" htmlFor="email">Email</label>
                             <input
                                 className="form__field"
                                 ref={node => (email = node)}
