@@ -5,6 +5,26 @@
         
     }
 
+    .form__fields {
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        flex-direction: column;
+
+        .form__field-group:not(:last-child) {
+            margin-bottom: space(5);
+            margin-right: 0;
+        }
+
+        @include mq(tablet) {
+            flex-direction: row;
+
+            .form__field-group:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &.form--sending {
         > *:not(.form__sending) {
             opacity: 0.5;

@@ -24,37 +24,38 @@ class BlogRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => {
             const [year, month, day] = post.frontmatter.date?.split(" ");
-            console.log(post);
             return (
               <article
                 key={post.id}
                 className={`blog-list__item tile is-child box notification u-mb-4 ${post.frontmatter.featuredpost ? 'is-featured grid-col-12' : 'grid-col-12'
                   }`}
               >
-                <div className="post-meta u-mr-6">
-                  {
-                    post.frontmatter.date &&
-                    (
-                      <div className="u-upper t-eyebrow blog-list__date">
-                        <span className="blog-list__date__month">{month}</span>
-                        <span className="blog-list__date__day">{day}</span>
-                        <span className="blog-list__date__year">{year}</span>
-                      </div>
-                    )
-                  }
-                </div>
-                <div className="blog-list__item__thumb u-mr-6">
-                  {post.frontmatter.featuredimage ? (
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        aspectRatio: 1.618,
-                        image: post.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                      }}
-                    />
-                  ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
-                </div>
-                <div>
+                <header>
+                  <div className="post-meta u-mr-6">
+                    {
+                      post.frontmatter.date &&
+                      (
+                        <div className="u-upper t-eyebrow blog-list__date">
+                          <span className="blog-list__date__month">{month}</span>
+                          <span className="blog-list__date__day">{day}</span>
+                          <span className="blog-list__date__year">{year}</span>
+                        </div>
+                      )
+                    }
+                  </div>
+                  <div className="blog-list__item__thumb u-mr-6">
+                    {post.frontmatter.featuredimage ? (
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          aspectRatio: 1.618,
+                          image: post.frontmatter.featuredimage,
+                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                        }}
+                      />
+                    ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
+                  </div>
+                </header>
+                <div className="blog-list__item__content">
                   <h3 className="t-h3 u-mb-2">
                     <Link
                       className="link"

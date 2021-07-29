@@ -19,7 +19,7 @@ const CustomForm = ({ status, message, onValidated, location }) => {
     }
 
     return (
-        <div className={`form form--subscribe${status ? ` form--${status}` : ''}`}>
+        <div className={`u-mb-5 form form--subscribe${status ? ` form--${status}` : ''}`}>
             {status === "sending" && (
                 <div className="form__sending">
                     <div className="loader loader--dark"></div>
@@ -39,8 +39,8 @@ const CustomForm = ({ status, message, onValidated, location }) => {
             )}
             {status !== "success" && (
                 <>
-                    <div className="u-mb-6" style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'stretch' }}>
-                        <div className="form__field-group u-mr-6">
+                    <div className="u-mb-6 form__fields">
+                        <div className="form__field-group u-mr-6 m-u-mr-0">
                             <label className="t-eyebrow u-mb-2" htmlFor="name">Name</label>
                             <input
                                 className="form__field"
