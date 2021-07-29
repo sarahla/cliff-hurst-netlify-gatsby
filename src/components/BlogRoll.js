@@ -65,7 +65,7 @@ class BlogRoll extends React.Component {
                   </h3>
                   {
                     post.frontmatter.tags?.length > 0 && (
-                      <ul class="list list--plain list--inline list--small u-mt-0 u-mb-4">
+                      <ul class="list list--plain list--inline list--inline--comma list--small u-mt-0 u-mb-4">
                         {
                           post.frontmatter.tags.map(t => <li style={{ marginBottom: 0 }}><Link to={`/tags/${t}`}>{t}</Link></li>)
                         }
@@ -74,10 +74,10 @@ class BlogRoll extends React.Component {
                   }
                   <p className="t-lead4 u-mb-4">
                     {post.excerpt}
-                  </p>
-                  <Link className="link link--cta link--cta--small" to={post.fields.slug}>
-                    Keep Reading
+                    &nbsp; <Link style={{ display: 'inline-block', fontSize: '1em' }} className="link link--cta link--cta--inline" to={post.fields.slug}>
+                      Keep Reading
                   </Link>
+                  </p>
                 </div>
               </article>
             )

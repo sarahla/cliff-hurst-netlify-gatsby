@@ -23,7 +23,7 @@ export const BlogPostTemplate = ({
       <div className="container u-mb-15 blog-post">
         {tags && tags.length ? (
           <div style={{ marginTop: `4rem` }}>
-            <ul style={{ justifyContent: 'center' }} className="list list--plain list--inline">
+            <ul style={{ justifyContent: 'center' }} className="list list--plain list--inline list--inline--comma">
               {tags.map((tag) => (
                 <li key={tag + `tag`}>
                   <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>

@@ -5,11 +5,15 @@
 
     &--inline {
         display: flex;
-
+        flex-wrap: wrap;
         li {
             margin-right: space(3);
-            &:not(:last-child)::after {
-                content: ',';
+        }
+        &--comma {
+            li {
+                &:not(:last-child)::after {
+                    content: ',';
+                }
             }
         }
     }
