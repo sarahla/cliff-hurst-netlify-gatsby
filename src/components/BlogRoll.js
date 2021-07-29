@@ -20,17 +20,31 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="grid blog-list">
+      <div className="blog-list">
         {posts &&
-          posts.map(({ node: post }) => (
-            <article
-              key={post.id}
-              className={`blog-list__item tile is-child box notification u-mb-4 ${post.frontmatter.featuredpost ? 'is-featured grid-col-4' : 'grid-col-4'
-                }`}
-            >
-              <header>
-                {post.frontmatter.featuredimage ? (
-                  <div className="blog-list__item__thumb">
+          posts.map(({ node: post }) => {
+            const [year, month, day] = post.frontmatter.date?.split(" ");
+            console.log(post);
+            return (
+              <article
+                key={post.id}
+                className={`blog-list__item tile is-child box notification u-mb-4 ${post.frontmatter.featuredpost ? 'is-featured grid-col-12' : 'grid-col-12'
+                  }`}
+              >
+                <div className="post-meta u-mr-6">
+                  {
+                    post.frontmatter.date &&
+                    (
+                      <div className="u-upper t-eyebrow blog-list__date">
+                        <span className="blog-list__date__month">{month}</span>
+                        <span className="blog-list__date__day">{day}</span>
+                        <span className="blog-list__date__year">{year}</span>
+                      </div>
+                    )
+                  }
+                </div>
+                <div className="blog-list__item__thumb u-mr-6">
+                  {post.frontmatter.featuredimage ? (
                     <PreviewCompatibleImage
                       imageInfo={{
                         aspectRatio: 1.618,
@@ -38,31 +52,36 @@ class BlogRoll extends React.Component {
                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
                       }}
                     />
-                  </div>
-                ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
-                <div className="post-meta u-mt-6">
-                  <span className="u-upper t-eyebrow">
-                    {post.frontmatter.date}
-                  </span>
-                  <br />
-                  <h3 className="t-h4 u-mt-2 u-mb-4">
+                  ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
+                </div>
+                <div>
+                  <h3 className="t-h3 u-mb-2">
                     <Link
                       className="link"
                       to={post.fields.slug}
                     >
-                      {post.frontmatter.title}
+                      <span className="t-black">{post.frontmatter.title}</span>
                     </Link>
                   </h3>
+                  {
+                    post.frontmatter.tags?.length > 0 && (
+                      <ul class="list list--plain list--inline list--small u-mt-0 u-mb-4">
+                        {
+                          post.frontmatter.tags.map(t => <li style={{ marginBottom: 0 }}><Link to={`/tags/${t}`}>{t}</Link></li>)
+                        }
+                      </ul>
+                    )
+                  }
+                  <p className="t-lead4 u-mb-4">
+                    {post.excerpt}
+                  </p>
+                  <Link className="link link--cta link--cta--small" to={post.fields.slug}>
+                    Keep Reading
+                  </Link>
                 </div>
-              </header>
-              <p className="t-lead4 u-mb-4">
-                {post.excerpt}
-              </p>
-              <Link className="link link--cta link--cta--small" to={post.fields.slug}>
-                Keep Reading
-              </Link>
-            </article>
-          ))}
+              </article>
+            )
+          })}
       </div>
     )
   }
@@ -94,7 +113,8 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
+                tags
+                date(formatString: "YYYY MMM DD")
                 featuredpost
                 featuredimage {
                   childImageSharp {
