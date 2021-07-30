@@ -55,7 +55,7 @@ class BlogRoll extends React.Component {
                     ) : <ImagePlaceholder aspectRatio="1.618"></ImagePlaceholder>}
                   </div>
                 </header>
-                <div className="blog-list__item__content">
+                <div className="blog-list__item__content u-mt-1">
                   <h3 className="t-h3 u-mb-2">
                     <Link
                       className="link"
