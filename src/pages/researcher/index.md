@@ -20,7 +20,7 @@ Most of the articles described in that essay can be accessed [here](https://clif
 
 In my capacity as Vice President of Research for the Hartman Institute, I am leading a multi-year effort to select, edit, digitize, proofread, and publish more of Hartman’s previously unpublished works. Our first publications from this effort are:  *Five Lectures on Formal Axiology*, *The Revolution Against War*, both of which I am the Editor, and *Wit & Wisdom: Quotes by Robert S. Hartman*, of which I am Co-Editor..
 
-These volumes are now available in paperback, hardcover,  and e-book formats from both [Amazon](https://www.amazon.com/Lectures-Formal-Axiology-Robert-Hartman/dp/1642280267/ref=sr_1_1?keywords=Clifford+G.+Hurst&qid=1562162751&s=books&sr=1-1) and [Barnes & Noble](https://www.barnesandnoble.com/w/five-lectures-on-formal-axiology-robert-s-hartman/1131056179?ean=9781642280265). They also can be purchased directly from the Hartman Institute at: <https://hartmaninstitute.org/books> .
+These volumes are now available in paperback, hardcover,  and e-book formats from both [Amazon](https://www.amazon.com/Lectures-Formal-Axiology-Robert-Hartman/dp/1642280267/ref=sr_1_1?keywords=Clifford+G.+Hurst&qid=1562162751&s=books&sr=1-1) and [Barnes & Noble](https://www.barnesandnoble.com/w/five-lectures-on-formal-axiology-robert-s-hartman/1131056179?ean=9781642280265). They also can be purchased directly from the Hartman Institute at:<https://www.hartmaninstitute.org/bookstore> .
 
 Three or four other planned volumes are in various stages of editing.
 
