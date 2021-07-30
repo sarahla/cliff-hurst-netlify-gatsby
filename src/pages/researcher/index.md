@@ -16,14 +16,12 @@ My personal journey into academic research was chronicled recently as a chapter 
 
 My Fielding story, Chapter 2 in the book, is entitled, “On Becoming an Axiological Hermeneut.” You can read that submission [here](https://cliffordhurst.com/assets/pdfs/Hurst_2019_On_Becoming_an_Axiological_Hermeneut.pdf). This essay provides a chronological account of my published research since 2010.
 
-Most of the articles described in that essay can be accessed [here](https://cliffordhurst.com/researcher/articles.html). They are also available on [www.academia.edu](https://westminstercollege.academia.edu/CliffordHurst) and [www.researchgate.net](https://www.researchgate.net/).
+Most of the articles described in that essay can be accessed [here](https://cliffordhurst.com/researcher/articles.html). They are also available on [www.academia.edu](https://westminstercollege.academia.edu/CliffordHurst).
 
-I do not have permission to post publicly my 2019 article in *The International Journal of Entrepreneurial Behavior and Research*, which is entitled, “An Axiological Measure of Entrepreneurial Cognition.” It can be downloaded via an academic library search or purchased through Emerald Insight. Or, it can be [purchased from Emerald](https://www.emeraldinsight.com/doi/full/10.1108/IJEBR-05-2018-0337). If you have trouble finding it, send me an email and I can get you a copy.
+In my capacity as Vice President of Research for the Hartman Institute, I am leading a multi-year effort to select, edit, digitize, proofread, and publish more of Hartman’s previously unpublished works. Our first publications from this effort are:  *Five Lectures on Formal Axiology*, *The Revolution Against War*, both of which I am the Editor, and *Wit & Wisdom: Quotes by Robert S. Hartman*, of which I am Co-Editor..
 
-In my capacity as Vice President of Research for the Hartman Institute, I am leading a multi-year effort to select, edit, digitize, proofread, and publish more of Hartman’s previously unpublished works. Our first publication from this effort is entitled, *Five Lectures on Formal Axiology*, of which I am the Editor.
+These volumes are now available in paperback, hardcover,  and e-book formats from both [Amazon](https://www.amazon.com/Lectures-Formal-Axiology-Robert-Hartman/dp/1642280267/ref=sr_1_1?keywords=Clifford+G.+Hurst&qid=1562162751&s=books&sr=1-1) and [Barnes & Noble](https://www.barnesandnoble.com/w/five-lectures-on-formal-axiology-robert-s-hartman/1131056179?ean=9781642280265). They also can be purchased directly from the Hartman Institute at: <https://hartmaninstitute.org/books> .
 
-This is a slim volume that provides a good introduction to Hartman’s theory of formal axiology. This book, published in April of 2019, is now available both as a paperback and as an e-book from both [Amazon](https://www.amazon.com/Lectures-Formal-Axiology-Robert-Hartman/dp/1642280267/ref=sr_1_1?keywords=Clifford+G.+Hurst&qid=1562162751&s=books&sr=1-1) and [Barnes & Noble](https://www.barnesandnoble.com/w/five-lectures-on-formal-axiology-robert-s-hartman/1131056179?ean=9781642280265).
-
-I am currently working to edit a volume of Hartman’s selected writing about war and peace. My goal is to have it published before the end of 2019. Three or four other planned volumes are in various stages of editing.
+Three or four other planned volumes are in various stages of editing.
 
 My next research project carries a working title of: “Change Over Time.” My aim is to investigate whether, and if so, in what ways, formal education results in long-term changes in college students’ deep-seated, often unconsciously held, thought patterns. Stay tuned. I will report on my findings here as they emerge.
