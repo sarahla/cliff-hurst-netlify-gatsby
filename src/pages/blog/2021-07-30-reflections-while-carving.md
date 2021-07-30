@@ -4,6 +4,7 @@ title: Reflections while Carving
 date: 2021-07-30T16:00:21.049Z
 description: While I was engaged in my favorite hobby recently, these thoughts
   wandered into my mind....
+featuredpost: true
 featuredimage: /img/spoon-carver1.jpg
 tags:
   - carving
