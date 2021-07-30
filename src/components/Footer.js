@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import SignupForm from '../components/Forms/SignupForm';
+import { withPrefix } from 'gatsby'
 
 const Footer = ({ location }) => {
     return (
@@ -32,7 +33,7 @@ const Footer = ({ location }) => {
                     <ul className="nav__list">
                         <li><a href="mailto:cliff@cliffordhurst.com">Email Me</a></li>
                         <li><a href="https://www.linkedin.com/in/cliffhurst">LinkedIn</a></li>
-                        <li><a href="/assets/pdfs/Hurst_Clifford_CV_06142013.pdf">CV</a></li>
+                        <li><a href={`${withPrefix('/')}img/Hurst_Clifford_CV_06142013.pdf`}>CV</a></li>
                     </ul>
                 </div>
             </nav>
