@@ -25,4 +25,6 @@ articles:
     pdf: /img/hurst_2009_hartman_v_rokeach.pdf
   - title: Sustainable telemarketing? A new theory of consumer behavior (2008)
     pdf: /img/hurst_2008__sustainable_telemarketing.pdf
+  - title: Applying Good Judgment to Telephone Triage Calls
+    pdf: /img/hurst_applying-good-judgment-to-telephone-triage-calls.pdf
 ---
