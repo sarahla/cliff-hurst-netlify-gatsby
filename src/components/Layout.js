@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
-import { BrowserRouter } from 'react-router-dom'
 
 const TemplateWrapper = ({ children, hideLogo, location = 'general' }) => {
   const { title, description } = useSiteMetadata()
@@ -49,11 +48,9 @@ const TemplateWrapper = ({ children, hideLogo, location = 'general' }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <BrowserRouter>
-        <Navbar hideLogo={hideLogo} />
-        <div>{children}</div>
-        <Footer {...{ location }} />
-      </BrowserRouter>
+      <Navbar hideLogo={hideLogo} />
+      <div>{children}</div>
+      <Footer {...{ location }} />
     </div>
   )
 }
