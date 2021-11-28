@@ -2,10 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Poster from '../components/Poster'
-import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({ blurbs }) => (
   <>
@@ -21,13 +19,10 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter);
   return (
-    <Layout location="blog" hideLogo={true}>
-      <IndexPageTemplate
-        blurbs={frontmatter.blurbs}
-      />
-    </Layout>
+    <IndexPageTemplate
+      blurbs={frontmatter.blurbs}
+    />
   )
 }
 

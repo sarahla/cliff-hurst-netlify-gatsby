@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import loadable from '@loadable/component'
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Content, { HTMLContent } from '../components/Content'
 const TestimonialSection = loadable(() => import('../components/TestimonialSection/'));
-
 
 export const TestimonialPageTemplate = ({
   title,
@@ -45,17 +43,14 @@ TestimonialPageTemplate.propTypes = {
 
 const TestimonialPage = ({ data }) => {
   const { markdownRemark: post } = data
-  const location = post.frontmatter.title?.toLowerCase();
   return (
-    <Layout {...{ location }}>
-      <TestimonialPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-        image={post.frontmatter.image}
-        description={post.frontmatter.description}
-      />
-    </Layout>
+    <TestimonialPageTemplate
+      contentComponent={HTMLContent}
+      title={post.frontmatter.title}
+      content={post.html}
+      image={post.frontmatter.image}
+      description={post.frontmatter.description}
+    />
   )
 }
 

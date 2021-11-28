@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 
 
@@ -22,24 +21,22 @@ class TagRoute extends React.Component {
       } tagged with “${tag}”`
 
     return (
-      <Layout>
-        <section className="section">
-          <Helmet title={`${tag} | ${title}`} />
-          <Hero title={`Tag: “${tag}”`} style="sub" />
-          <div className="wrapper">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="t-h3">{tagHeader}</h3>
-                <ul className="taglist list t-lead2">{postLinks}</ul>
-                <p className="u-center u-mt-10"><Link className="link link--cta link--cta--small" to="/tags/">Browse all tags</Link></p>
-              </div>
+      <section className="section">
+        <Helmet title={`${tag} | ${title}`} />
+        <Hero title={`Tag: “${tag}”`} style="sub" />
+        <div className="wrapper">
+          <div className="columns">
+            <div
+              className="column is-10 is-offset-1"
+              style={{ marginBottom: '6rem' }}
+            >
+              <h3 className="t-h3">{tagHeader}</h3>
+              <ul className="taglist list t-lead2">{postLinks}</ul>
+              <p className="u-center u-mt-10"><Link className="link link--cta link--cta--small" to="/tags/">Browse all tags</Link></p>
             </div>
           </div>
-        </section>
-      </Layout>
+        </div>
+      </section>
     )
   }
 }

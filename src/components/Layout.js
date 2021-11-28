@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -6,8 +6,17 @@ import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children, hideLogo, location = 'general' }) => {
+
+const TemplateWrapper = ({ path, children }) => {
+  const [navbarActive, setNavBarActive] = useState(false);
   const { title, description } = useSiteMetadata()
+  const onToggle = () => {
+    setNavBarActive(!navbarActive)
+    document.body.classList.toggle('nav-active')
+  }
+  const location = path && path.replace(/\//g, '') || 'general';
+  const hideLogo = path === '/';
+
   return (
     <div>
       <Helmet>
@@ -48,7 +57,7 @@ const TemplateWrapper = ({ children, hideLogo, location = 'general' }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar hideLogo={hideLogo} />
+      <Navbar onToggle={onToggle} active={navbarActive} hideLogo={hideLogo} />
       <div>{children}</div>
       <Footer {...{ location }} />
     </div>

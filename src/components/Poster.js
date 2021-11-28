@@ -1,5 +1,5 @@
 import React from 'react'
-import icons from '../img/icons.svg'
+import Icon from './Icon'
 
 function Poster() {
     return (
@@ -31,8 +31,8 @@ function Poster() {
                         <path className="hero__path line-02" d="M1,1c56,0.4,188.1,2.9,209,2.3c42.3-1.2,108,1.5,149.4,1.5"/>
                     </g>
                 </svg>
-            </h1> 
-            <svg className="icon-arrow-down fadein-bounce"><use xlinkHref={`${icons}#icon-arrow-down`}></use></svg>
+            </h1>
+            <Icon name="icon-arrow-down" className="icon-arrow-down fadein-bounce" /> 
         </div>
     )
 }

@@ -41,17 +41,14 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  const location = post.frontmatter.title?.toLowerCase();
   return (
-    <Layout {...{ location }}>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-        image={post.frontmatter.image}
-        description={post.frontmatter.description}
-      />
-    </Layout>
+    <AboutPageTemplate
+      contentComponent={HTMLContent}
+      title={post.frontmatter.title}
+      content={post.html}
+      image={post.frontmatter.image}
+      description={post.frontmatter.description}
+    />
   )
 }
 

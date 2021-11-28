@@ -65,6 +65,12 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`${__dirname}/src/components/Layout.js`),
+      },
+    },
     // {
     //   resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
     //   options: {

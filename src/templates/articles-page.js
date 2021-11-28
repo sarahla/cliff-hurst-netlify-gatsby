@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 
 export const ArticlesPageTemplate = ({ title, articles }) => (
@@ -34,12 +32,10 @@ ArticlesPageTemplate.propTypes = {
 const ArticlesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
   return (
-    <Layout location="articles" >
-      <ArticlesPageTemplate
-        title={frontmatter.title}
-        articles={frontmatter.articles}
-      />
-    </Layout>
+    <ArticlesPageTemplate
+      title={frontmatter.title}
+      articles={frontmatter.articles}
+    />
   )
 }
 
