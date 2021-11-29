@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import logo from '../img/cliff-hurst-logo.svg'
 import Icon from './Icon'
+import { useHasMounted } from '../utils'
 
 const Navbar = ({ onToggle, active, hideLogo }) => {  
+  const hasMounted = useHasMounted();
+
   useEffect(() => {
     return () => {
       // clean up active class on body
@@ -14,7 +17,7 @@ const Navbar = ({ onToggle, active, hideLogo }) => {
 
   return (
     <header className={`nav ${active ? 'is-active' : ''}`}>
-      { !hideLogo ? (
+      { !hideLogo && hasMounted ? (
         <Link to="/" className="nav__logo" title="Logo">
           <img src={logo} width="154" height="24" alt="Cliff Hurst" />
         </Link>) : ''
