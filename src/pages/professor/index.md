@@ -11,4 +11,4 @@ I’m currently a visiting assistant professor at St. Edwards University in Aust
 
 I’ve enjoyed teaching undergraduate as well as graduate students. I’ve taught a number of subjects, including entrepreneurship, social entrepreneurship, leadership, marketing, effective writing, public speaking, organizational behavior, and design thinking.
 
-Professors often make a habit of putting into writing our teaching philosophy. [Here’s mine.](https://cliffordhurst.com/assets/pdfs/Hurst_teaching_philosophy.pdf)
+Professors often make a habit of putting into writing our teaching philosophy. [Here’s mine.](https://cliffordhurst.com/img/Hurst_teaching_philosophy.pdf)
