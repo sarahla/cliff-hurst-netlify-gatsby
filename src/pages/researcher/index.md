@@ -14,7 +14,7 @@ In 1976, the Robert S. Hartman Institute for Formal and Applied Axiology was fou
 
 My personal journey into academic research was chronicled recently as a chapter in a monograph published by Fielding Graduate University (May, 2019). The book is entitled, *The Fielding Scholar Practitioner: Voices from 45 Years of Fielding Graduate University*. In the editors’ words, “This is a collection of essays, memoirs and research articles that capture the unique role of Fielding Graduate University as one of the nation’s oldest graduate institutions for mid-career learners.” I am proud to have earned my PhD at Fielding and to have contributed a chapter to this monograph.
 
-My Fielding story, Chapter 2 in the book, is entitled, “On Becoming an Axiological Hermeneut.” You can read that submission [here](https://cliffordhurst.com/static/Hurst_2019_On_Becoming_an_Axiological_Hermeneut.pdf). This essay provides a chronological account of my published research since 2010.
+My Fielding story, Chapter 2 in the book, is entitled, “On Becoming an Axiological Hermeneut.” You can read that submission [here](https://cliffordhurst.com/img/Hurst_2019_On_Becoming_an_Axiological_Hermeneut.pdf). This essay provides a chronological account of my published research since 2010.
 
 Most of the articles described in that essay can be accessed [on my articles page](https://cliffordhurst.com/articles.html). They are also available on [www.academia.edu](https://westminstercollege.academia.edu/CliffordHurst).
 
