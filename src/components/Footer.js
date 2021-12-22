@@ -26,6 +26,7 @@ const Footer = ({ location }) => {
                     <ul className="nav__list">
                         <li><Link to="/articles/">Articles</Link></li>
                         <li><Link to="/blog/">Blog</Link></li>
+                        <li><Link to="/media/">Media</Link></li>
                     </ul>
                 </div>
                 <div className="grid-col-2 grid-col-t-4">

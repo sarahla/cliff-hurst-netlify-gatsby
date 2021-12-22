@@ -7,6 +7,7 @@ backend:
     delete: "Delete {{collection}} “{{slug}}”"
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
+local_backend: true
 
 media_folder: static/img
 public_folder: /img
@@ -184,5 +185,27 @@ collections:
                 [
                   { label: Article Title, name: title, widget: string },
                   { label: Article PDF, name: pdf, widget: file },
+                ],
+            }
+      - file: "src/pages/media/index.md"
+        label: "Media Page"
+        name: "media"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "media-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Items,
+              name: items,
+              widget: list,
+              fields:
+                [
+                  { label: "Item Title", name: title, widget: string },
+                  { label: "Item Description", name: description , widget: text, required: false },
+                  { label: "Item URL", name: url, widget: "string", hint: "Add the url for YouTube, Spotify or other media source." },
                 ],
             }
