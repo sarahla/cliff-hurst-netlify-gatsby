@@ -6,7 +6,7 @@ articles:
   - title: An Axiological Measure of Entrepreneurial Cognition (2019)
     pdf: /img/hurst_2019_an_axiological_measure_of_entrepreneurial_cognition.pdf.pdf
   - pdf: /img/hurst_2019_on_becoming_an_axiological_hermeneut.pdf
-    title: On Becoming an Axiological Hermeneut
+    title: On Becoming an Axiological Hermeneut (2019)
   - pdf: /img/north_hurst_and_nelson_2019_the_role_of_value_judgment_in_congruent_personalities.pdf
     title: The Role of Value Judgement in Congruent Personalities, Trait
       Authenticity, and Authentic Leadership (2019)
