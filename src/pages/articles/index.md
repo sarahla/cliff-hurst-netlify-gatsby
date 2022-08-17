@@ -27,4 +27,6 @@ articles:
     pdf: /img/hurst_2008__sustainable_telemarketing.pdf
   - title: Applying Good Judgment to Telephone Triage Calls
     pdf: /img/hurst_applying-good-judgment-to-telephone-triage-calls.pdf
+  - pdf: /img/hurst_2019_on_becoming_an_axiological_hermeneut.pdf
+    title: On Becoming an Axiological Hermeneut
 ---
