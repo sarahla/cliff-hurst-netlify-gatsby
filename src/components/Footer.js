@@ -33,7 +33,7 @@ const Footer = ({ location }) => {
                     <ul className="nav__list">
                         <li><a href="mailto:cliff@cliffordhurst.com">Email Me</a></li>
                         <li><a href="https://www.linkedin.com/in/cliffhurst">LinkedIn</a></li>
-                        <li><a href={`${withPrefix('/')}img/Hurst_Clifford_CV_06142013.pdf`}>CV</a></li>
+                        <li><a href={`${withPrefix('/')}img/Hurst_CV.pdf`}>CV</a></li>
                     </ul>
                 </div>
             </nav>
