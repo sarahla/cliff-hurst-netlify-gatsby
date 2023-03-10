@@ -3,6 +3,8 @@ templateKey: articles-page
 path: /articles
 title: Articles
 articles:
+  - title: The Great Resignation--An Axiological VFiew
+    pdf: /img/hurst_2022_the_great_resignation_an_axiological_view.pdf
   - title: An Axiological Measure of Entrepreneurial Cognition (2019)
     pdf: /img/hurst_2019_an_axiological_measure_of_entrepreneurial_cognition.pdf.pdf
   - pdf: /img/hurst_2019_on_becoming_an_axiological_hermeneut.pdf
@@ -29,6 +31,4 @@ articles:
     pdf: /img/hurst_2008__sustainable_telemarketing.pdf
   - title: Applying Good Judgment to Telephone Triage Calls
     pdf: /img/hurst_applying-good-judgment-to-telephone-triage-calls.pdf
-  - title: The Great Resignation--An Axiological VFiew
-    pdf: /img/hurst_2022_the_great_resignation_an_axiological_view.pdf
 ---
