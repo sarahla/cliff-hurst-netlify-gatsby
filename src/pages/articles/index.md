@@ -29,4 +29,6 @@ articles:
     pdf: /img/hurst_2008__sustainable_telemarketing.pdf
   - title: Applying Good Judgment to Telephone Triage Calls
     pdf: /img/hurst_applying-good-judgment-to-telephone-triage-calls.pdf
+  - title: The Great Resignation--An Axiological VFiew
+    pdf: /img/hurst_2022_the_great_resignation_an_axiological_view.pdf
 ---
