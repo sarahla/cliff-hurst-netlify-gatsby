@@ -9,6 +9,6 @@ I﻿'ve been teaching one thing or another all of my life. Only over the past tw
 
 I joined the faculty of Ohio Wesleyan University in the fall of 2023 . And I now serve as an assistant professor of management/entrepreneurship there. On occasion, I also teach as an adjunct faculty member at Fielding Graduate University, where I teach in the Master of Arts in Org Development and Leadership. Previously, I have taught at Westminster College in Salt Lake City and St. Edward's University in Austin, TX. I've served as an adjunct professor at the University of San Francisco, UC Berkeley Extension, and Santa Clara University. 
 
-I﻿ thoroughly enjoy teaching undergraduate students and appreciate the occasional interaction with graduate students, as well. I've taught a number of subject, mostly related to entrepreneurship and social entrepreneurship, but I have also taught courses in marketing, leadership, effective writing, public speaking, organizational behavior, and design thinking. 
+I﻿ thoroughly enjoy teaching undergraduate students and appreciate the occasional interaction with graduate students, as well. I've taught a number of subjects, mostly related to entrepreneurship and social entrepreneurship, but I have also taught courses in marketing, leadership, effective writing, public speaking, organizational behavior, and design thinking. 
 
 Professors often make a habit of putting into writing our teaching philosophy. [Here’s mine.](https://cliffordhurst.com/img/Hurst_teaching_philosophy.pdf)
