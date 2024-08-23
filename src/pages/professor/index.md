@@ -11,4 +11,4 @@ I joined the faculty of Ohio Wesleyan University in the fall of 2023 . And I now
 
 I﻿ thoroughly enjoy teaching undergraduate students and appreciate the occasional interaction with graduate students, as well. I've taught a number of subjects, mostly related to entrepreneurship and social entrepreneurship, but I have also taught courses in marketing, leadership, effective writing, public speaking, organizational behavior, and design thinking. 
 
-Professors often make a habit of putting into writing our teaching philosophy. [Here’s mine.](https://cliffordhurst.com/img/Hurst_teaching_philosophy.pdf)
+Professors often make a habit of putting into writing our teaching philosophy. [Here’s mine.](https://cliffordhurst.com/img/Hurst_teaching_philosophy_2024.pdf)
