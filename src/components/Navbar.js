@@ -53,7 +53,7 @@ const Navbar = ({ onToggle, active, hideLogo }) => {
         <ul className="nav__list">
           <li><a href="mailto:cliff@cliffordhurst.com">Email Me</a></li>
           <li><a href="https://www.linkedin.com/in/cliffhurst" target="_blank" rel="noreferrer">LinkedIn</a></li>
-          <li><a href="/assets/pdfs/Hurst_Clifford_CV_06142013.pdf">CV</a></li>
+          <li><a href="/img/Hurst_CV.pdf">CV</a></li>
         </ul>
 
         <p className="nav__footer t-caption">© Cliff Hurst</p>
