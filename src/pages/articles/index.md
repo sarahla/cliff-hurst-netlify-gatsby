@@ -31,4 +31,6 @@ articles:
     pdf: /img/hurst_2008__sustainable_telemarketing.pdf
   - title: Applying Good Judgment to Telephone Triage Calls
     pdf: /img/hurst_applying-good-judgment-to-telephone-triage-calls.pdf
+  - title: The Iceberg Metaphor of Human Cognition
+    pdf: /img/hurst_2024_the_iceberg_metaphor_of_human_cognition.pdf
 ---
