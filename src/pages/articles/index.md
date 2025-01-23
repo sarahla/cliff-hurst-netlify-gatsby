@@ -4,7 +4,7 @@ path: /articles
 title: Articles
 articles:
   - title: The Iceberg Metaphor of Human Cognition
-    pdf: /img/hurst_2024_the_iceberg_metaphor_of_human_cognition.pdf
+    pdf: /img/the-iceberg-metaphor-of-human-cognition_2024.pdf
   - title: The Great Resignation--An Axiological View
     pdf: /img/hurst_2022_the_great_resignation_an_axiological_view.pdf
   - title: An Axiological Measure of Entrepreneurial Cognition (2019)
