@@ -3,6 +3,8 @@ templateKey: articles-page
 path: /articles
 title: Articles
 articles:
+  - title: The Iceberg Metaphor of Human Cognition
+    pdf: /img/hurst_2024_the_iceberg_metaphor_of_human_cognition.pdf
   - title: The Great Resignation--An Axiological View
     pdf: /img/hurst_2022_the_great_resignation_an_axiological_view.pdf
   - title: An Axiological Measure of Entrepreneurial Cognition (2019)
@@ -31,6 +33,4 @@ articles:
     pdf: /img/hurst_2008__sustainable_telemarketing.pdf
   - title: Applying Good Judgment to Telephone Triage Calls
     pdf: /img/hurst_applying-good-judgment-to-telephone-triage-calls.pdf
-  - title: The Iceberg Metaphor of Human Cognition
-    pdf: /img/hurst_2024_the_iceberg_metaphor_of_human_cognition.pdf
 ---
